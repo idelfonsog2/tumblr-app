@@ -74,5 +74,37 @@
             </objects>
             <point key="canvasLocation" x="120.8" y="119.1904047976012"/>
         </scene>
+        <!--Auth View Controller-->
+        <scene sceneID="vfw-7V-zvq">
+            <objects>
+                <viewController storyboardIdentifier="AuthViewController" id="nkA-pC-gNV" customClass="AuthViewController" customModule="tumblr_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YLq-c4-4ZA"/>
+                        <viewControllerLayoutGuide type="bottom" id="HhD-sq-4ib"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WSw-Vb-7aO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7sy-Nx-nxY">
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7sy-Nx-nxY" firstAttribute="top" secondItem="YLq-c4-4ZA" secondAttribute="bottom" constant="8" id="75J-Zm-jVn"/>
+                            <constraint firstAttribute="trailing" secondItem="7sy-Nx-nxY" secondAttribute="trailing" id="Nn8-Lx-V5y"/>
+                            <constraint firstItem="7sy-Nx-nxY" firstAttribute="leading" secondItem="WSw-Vb-7aO" secondAttribute="leading" id="QdU-wX-YW0"/>
+                            <constraint firstItem="HhD-sq-4ib" firstAttribute="top" secondItem="7sy-Nx-nxY" secondAttribute="bottom" id="kio-K1-Ybt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="7sy-Nx-nxY" id="wYx-fR-BUO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yGh-sG-HST" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="144.80000000000001" y="804.64767616191909"/>
+        </scene>
     </scenes>
 </document>
