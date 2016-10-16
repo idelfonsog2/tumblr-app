@@ -22,7 +22,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.idelfonso.auth</string>
+			<string>com.idelfonso.tumblr-app</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>tumblr-app</string>

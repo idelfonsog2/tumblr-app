@@ -14,10 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        //or tumblr-app
-        if url.host == "auth-callback"{
-            OAuthSwift.handle(url: url)
-        }
+        OAuth1Swift.handle(url: url)
         return true
     }
     

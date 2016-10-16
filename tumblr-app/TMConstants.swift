@@ -13,8 +13,8 @@ struct Constants {
     static let ConsumerKey = "Y1rZXHptROHv4rGJFGdfbPVkakE2HXPwjd3wRpnjrJeUPyRiIr"
     static let SecretKey = "JbdFQBF6QQUILBRXhVgc2PKOhWs3mGMfi57KswESEUoC1z1Hls"
 
-    static let RequestToken = "https://api.tumblr.com/request_token"
-    static let Authorize = "https://api.tumblr.com/authorize"
+    static let RequestToken = "https://www.tumblr.com/oauth/request_token"
+    static let Authorize = "https://www.tumblr.com/oauth/authorize"
     static let AccessToken = "https://api.tumblr.com/oauth/access_token"
     
     static let scheme = "https"

@@ -9,17 +9,21 @@
 import UIKit
 import OAuthSwift
 
-class LoginViewController: UIViewController {
+class LoginViewController: OAuthWebViewController {
 
+    //MARK: IBOutlets
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var debugLabel: UILabel!
     
+    //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
+    
+    //MARK: IBActions
     @IBAction func loginWithTumblr(_ sender: AnyObject) {
-        
-        
+        //Set OAuth
         let oauthswift = OAuth1Swift(
             consumerKey: Constants.ConsumerKey,
             consumerSecret: Constants.SecretKey,
@@ -27,20 +31,31 @@ class LoginViewController: UIViewController {
             authorizeUrl: Constants.Authorize,
             accessTokenUrl: Constants.AccessToken)
         
-        oauthswift.authorize(withCallbackURL: "tumblr-app://oauth-callback", success: { (credential, response, parameter) in
-            print(credential.oauthToken)
-            print(credential.oauthTokenSecret)
+        let originalCallback = "tumblr-app://oauth-callback"
+        var encodedCallbackURL = originalCallback.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+        
+        
+        //Make request
+        oauthswift.authorizeURLHandler = SafariURLHandler(viewController: self, oauthSwift: oauthswift)
+
+        oauthswift.authorize(withCallbackURL: encodedCallbackURL!, success: { (credential, response, parameter) in
+            print(response)
+            print(parameter.count)
             print(parameter["user_id"])
-            }, failure: { (error) in print(error.localizedDescription) })
+            self.presentAlert(title: "Success", message: credential.oauthToken)
+            }, failure: { (error) in
+                self.debugLabel.text = error.localizedDescription
+                print(error)
+        })
+        
     }
     
-    func presentAler(title: String, message: String) {
+    func presentAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         
         self.present(alert, animated: true, completion: nil)
     }
-    
 
 
 }
