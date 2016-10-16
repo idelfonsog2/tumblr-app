@@ -31,22 +31,22 @@ class LoginViewController: OAuthWebViewController {
             authorizeUrl: Constants.Authorize,
             accessTokenUrl: Constants.AccessToken)
         
-        let originalCallback = "tumblr-app://oauth-callback"
-        var encodedCallbackURL = originalCallback.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
-        
-        
         //Make request
         oauthswift.authorizeURLHandler = SafariURLHandler(viewController: self, oauthSwift: oauthswift)
 
         oauthswift.authorize(withCallbackURL: "tumblr-app://oauth-callback", success: { (credential, response, parameter) in
             print(response)
             print(parameter.count)
-            print(parameter["user_id"])
+            print(parameter)
             self.presentAlert(title: "Success", message: credential.oauthToken)
             }, failure: { (error) in
                 self.debugLabel.text = error.localizedDescription
                 print(error)
         })
+        
+        let parameters = [
+        o
+        oauthswift.client.get(<#T##urlString: String##String#>, parameters: <#T##OAuthSwift.Parameters#>, headers: <#T##OAuthSwift.Headers?#>, success: <#T##OAuthSwiftHTTPRequest.SuccessHandler?##OAuthSwiftHTTPRequest.SuccessHandler?##(Data, HTTPURLResponse) -> Void#>, failure: <#T##OAuthSwiftHTTPRequest.FailureHandler?##OAuthSwiftHTTPRequest.FailureHandler?##(OAuthSwiftError) -> Void#>)
         
         
         

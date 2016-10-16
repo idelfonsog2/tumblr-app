@@ -25,6 +25,14 @@ struct Constants {
 
 struct Methods {
     static let BlogFollowers = "/blog/{blog-identifier}/followers"
+    static let Tagged = "/tagged"
+    static let UserInfo = "/user/info"
+    static let UserDashboard = "/user/dashboard"
+}
+
+struct ParameterKeys {
+    static let Tag = "tag"
+    
 }
 
 
