@@ -15,7 +15,7 @@ struct Constants {
 
     static let RequestToken = "https://www.tumblr.com/oauth/request_token"
     static let Authorize = "https://www.tumblr.com/oauth/authorize"
-    static let AccessToken = "https://api.tumblr.com/oauth/access_token"
+    static let AccessToken = "https://www.tumblr.com/oauth/access_token"
     
     static let scheme = "https"
     static let tumblrRequestTokenHost = "tumblr.com"

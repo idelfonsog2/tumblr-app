@@ -38,7 +38,7 @@ class LoginViewController: OAuthWebViewController {
         //Make request
         oauthswift.authorizeURLHandler = SafariURLHandler(viewController: self, oauthSwift: oauthswift)
 
-        oauthswift.authorize(withCallbackURL: encodedCallbackURL!, success: { (credential, response, parameter) in
+        oauthswift.authorize(withCallbackURL: "tumblr-app://oauth-callback", success: { (credential, response, parameter) in
             print(response)
             print(parameter.count)
             print(parameter["user_id"])
@@ -47,6 +47,8 @@ class LoginViewController: OAuthWebViewController {
                 self.debugLabel.text = error.localizedDescription
                 print(error)
         })
+        
+        
         
     }
     
