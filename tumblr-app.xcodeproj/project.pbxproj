@@ -15,7 +15,6 @@
 		6CE79FB71DB2C22A0059C19B /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE79FA81DB2BFA80059C19B /* OAuthSwift.framework */; };
 		6CE79FBC1DB2C3120059C19B /* TMClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE79FBB1DB2C3120059C19B /* TMClient.swift */; };
 		6CE79FC61DB2C9EB0059C19B /* TMConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE79FC51DB2C9EB0059C19B /* TMConstants.swift */; };
-		6CE79FC81DB2FAEC0059C19B /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE79FC71DB2FAEC0059C19B /* AuthViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,7 +87,6 @@
 		6CE79F9D1DB2BFA80059C19B /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = "../../frameworks/OAuthSwift-master/OAuthSwift.xcodeproj"; sourceTree = "<group>"; };
 		6CE79FBB1DB2C3120059C19B /* TMClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMClient.swift; sourceTree = "<group>"; };
 		6CE79FC51DB2C9EB0059C19B /* TMConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMConstants.swift; sourceTree = "<group>"; };
-		6CE79FC71DB2FAEC0059C19B /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +123,6 @@
 				6CE79F9D1DB2BFA80059C19B /* OAuthSwift.xcodeproj */,
 				6CE79F8B1DB2BF690059C19B /* AppDelegate.swift */,
 				6CE79F8D1DB2BF690059C19B /* LoginViewController.swift */,
-				6CE79FC71DB2FAEC0059C19B /* AuthViewController.swift */,
 				6CE79FB91DB2C2F60059C19B /* Model */,
 				6CE79F8F1DB2BF690059C19B /* Main.storyboard */,
 				6CE79F921DB2BF6A0059C19B /* Assets.xcassets */,
@@ -300,7 +297,6 @@
 			files = (
 				6CE79FBC1DB2C3120059C19B /* TMClient.swift in Sources */,
 				6CE79F8E1DB2BF690059C19B /* LoginViewController.swift in Sources */,
-				6CE79FC81DB2FAEC0059C19B /* AuthViewController.swift in Sources */,
 				6CE79FC61DB2C9EB0059C19B /* TMConstants.swift in Sources */,
 				6CE79F8C1DB2BF690059C19B /* AppDelegate.swift in Sources */,
 			);

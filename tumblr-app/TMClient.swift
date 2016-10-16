@@ -27,19 +27,14 @@ class TMClient: NSObject {
         }
     }
     
-    private func tmURLFromParamters(parameters: [String:AnyObject], withPathExtension: String? = nil) -> URL {
-        
-        //build url
+
+    //MARK: Tumblr API endpoint
+    func tumblrURL(withPathExtension: String? = nil) -> URL {
+        //URI Structure
         var components = URLComponents()
         components.scheme = Constants.scheme
         components.host = Constants.host
-        components.path = Constants.path
-        components.queryItems = [URLQueryItem]()
-        
-        for (key, value) in parameters {
-            let queryItem = URLQueryItem(name: key, value: "\(value)")
-            components.queryItems?.append(queryItem)
-        }
+        components.path = Constants.path + withPathExtension!
         
         return components.url!
     }

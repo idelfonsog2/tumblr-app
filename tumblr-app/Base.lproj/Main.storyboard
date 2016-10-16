@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,16 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3y-eg-mWC">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3y-eg-mWC">
                                 <frame key="frameInset" minX="71" minY="390" width="232" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="login with authorization token"/>
                                 <connections>
                                     <action selector="loginWithTumblr:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UEJ-lg-kq9"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Debug Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKF-1k-I6M">
-                                <frame key="frameInset" minX="16" minY="555" width="343" height="92"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Debug Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKF-1k-I6M">
+                                <frame key="frameInset" minX="16" minY="555" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.99600285291671753" green="0.99619680643081665" blue="0.99162989854812622" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -63,12 +64,6 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.47021949291229248" green="0.66132313013076782" blue="0.91043704748153687" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="PKF-1k-I6M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="PO5-iY-P9T"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PKF-1k-I6M" secondAttribute="bottom" constant="20" id="bIC-vG-3w1"/>
-                            <constraint firstItem="PKF-1k-I6M" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="mHq-cp-jch"/>
-                            <constraint firstItem="PKF-1k-I6M" firstAttribute="top" secondItem="f3y-eg-mWC" secondAttribute="bottom" constant="135" id="qZn-2Y-kYb"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="debugLabel" destination="PKF-1k-I6M" id="Yqt-UE-9Qg"/>
@@ -78,38 +73,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="120.8" y="119.1904047976012"/>
-        </scene>
-        <!--Auth View Controller-->
-        <scene sceneID="vfw-7V-zvq">
-            <objects>
-                <viewController storyboardIdentifier="AuthViewController" id="nkA-pC-gNV" customClass="AuthViewController" customModule="tumblr_app" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="YLq-c4-4ZA"/>
-                        <viewControllerLayoutGuide type="bottom" id="HhD-sq-4ib"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="WSw-Vb-7aO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7sy-Nx-nxY">
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="7sy-Nx-nxY" firstAttribute="top" secondItem="YLq-c4-4ZA" secondAttribute="bottom" constant="8" id="75J-Zm-jVn"/>
-                            <constraint firstAttribute="trailing" secondItem="7sy-Nx-nxY" secondAttribute="trailing" id="Nn8-Lx-V5y"/>
-                            <constraint firstItem="7sy-Nx-nxY" firstAttribute="leading" secondItem="WSw-Vb-7aO" secondAttribute="leading" id="QdU-wX-YW0"/>
-                            <constraint firstItem="HhD-sq-4ib" firstAttribute="top" secondItem="7sy-Nx-nxY" secondAttribute="bottom" id="kio-K1-Ybt"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="webView" destination="7sy-Nx-nxY" id="wYx-fR-BUO"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yGh-sG-HST" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="144.80000000000001" y="804.64767616191909"/>
         </scene>
     </scenes>
 </document>
