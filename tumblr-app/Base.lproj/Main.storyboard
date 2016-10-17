@@ -77,7 +77,7 @@
         <!--Search-->
         <scene sceneID="1jf-Ka-aSr">
             <objects>
-                <viewController id="RMz-KL-2mM" sceneMemberID="viewController">
+                <viewController id="RMz-KL-2mM" customClass="TMSearchViewController" customModule="tumblr_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gVr-qM-2Dn"/>
                         <viewControllerLayoutGuide type="bottom" id="dWu-do-kaH"/>
@@ -85,13 +85,35 @@
                     <view key="view" contentMode="scaleToFill" id="K6k-wb-I7p">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Search in Tumblr" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MRh-BM-Iyw">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="nyP-BC-1ma"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="joh-ep-qRB">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="joh-ep-qRB" firstAttribute="leading" secondItem="K6k-wb-I7p" secondAttribute="leading" id="8su-f8-OIW"/>
+                            <constraint firstAttribute="trailing" secondItem="MRh-BM-Iyw" secondAttribute="trailing" id="GlA-Hc-XNc"/>
+                            <constraint firstAttribute="trailing" secondItem="joh-ep-qRB" secondAttribute="trailing" id="ISx-97-pge"/>
+                            <constraint firstItem="joh-ep-qRB" firstAttribute="top" secondItem="MRh-BM-Iyw" secondAttribute="bottom" constant="8" id="Kbt-1N-aIF"/>
+                            <constraint firstItem="MRh-BM-Iyw" firstAttribute="top" secondItem="gVr-qM-2Dn" secondAttribute="bottom" id="Ogs-oy-L4i"/>
+                            <constraint firstItem="dWu-do-kaH" firstAttribute="top" secondItem="joh-ep-qRB" secondAttribute="bottom" id="jTn-8Q-IZu"/>
+                            <constraint firstItem="MRh-BM-Iyw" firstAttribute="leading" secondItem="K6k-wb-I7p" secondAttribute="leading" id="xcB-3N-bWz"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" id="3og-rP-h06"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L1a-30-dRq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1209" y="1390"/>
+            <point key="canvasLocation" x="1208.8" y="1389.3553223388308"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ebc-gF-Dcp">
@@ -113,10 +135,10 @@
             </objects>
             <point key="canvasLocation" x="1588" y="477"/>
         </scene>
-        <!--List of blogs-->
+        <!--Following-->
         <scene sceneID="dcA-Zx-boU">
             <objects>
-                <viewController id="PQw-50-Hpw" sceneMemberID="viewController">
+                <viewController id="PQw-50-Hpw" customClass="TMFollowingViewController" customModule="tumblr_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pbc-se-vfs"/>
                         <viewControllerLayoutGuide type="bottom" id="Vrl-A9-n0r"/>
@@ -124,13 +146,24 @@
                     <view key="view" contentMode="scaleToFill" id="UZb-9l-4Bl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iPW-DM-1W1">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vrl-A9-n0r" firstAttribute="top" secondItem="iPW-DM-1W1" secondAttribute="bottom" id="U73-er-sv0"/>
+                            <constraint firstItem="iPW-DM-1W1" firstAttribute="top" secondItem="Pbc-se-vfs" secondAttribute="bottom" constant="8" id="fGM-Q1-mLl"/>
+                            <constraint firstItem="iPW-DM-1W1" firstAttribute="leading" secondItem="UZb-9l-4Bl" secondAttribute="leading" id="qk2-Sb-xlm"/>
+                            <constraint firstAttribute="trailing" secondItem="iPW-DM-1W1" secondAttribute="trailing" id="s6z-Pg-DjX"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="List of blogs" id="7b8-lR-FUP"/>
+                    <tabBarItem key="tabBarItem" title="Following" id="7b8-lR-FUP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HJW-Tg-dQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2025" y="1390"/>
+            <point key="canvasLocation" x="2024.8" y="1389.3553223388308"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mx0-BC-M1t">
@@ -151,7 +184,7 @@
         <!--New Post-->
         <scene sceneID="JsM-D5-dQ8">
             <objects>
-                <viewController id="uFO-fR-KTD" customClass="TMSearchViewController" customModule="tumblr_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uFO-fR-KTD" customClass="TMEditBlogViewController" customModule="tumblr_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dGm-oK-Pm0"/>
                         <viewControllerLayoutGuide type="bottom" id="XOt-1V-3Si"/>
@@ -160,29 +193,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yyG-1z-vwN">
-                                <frame key="frameInset" minX="16" minY="91" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5AD-iK-b6N">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hah-2U-lhp">
-                                <frame key="frameInset" minX="16" minY="143" width="94" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="dismiss"/>
-                                <connections>
-                                    <action selector="dismissButton:" destination="uFO-fR-KTD" eventType="touchUpInside" id="OId-hS-uMX"/>
-                                </connections>
-                            </button>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XOt-1V-3Si" firstAttribute="top" secondItem="5AD-iK-b6N" secondAttribute="bottom" constant="17" id="2LQ-6g-aAT"/>
+                            <constraint firstItem="5AD-iK-b6N" firstAttribute="leading" secondItem="WM2-Ww-eRn" secondAttribute="leading" id="7Pp-Hl-ptM"/>
+                            <constraint firstItem="5AD-iK-b6N" firstAttribute="top" secondItem="dGm-oK-Pm0" secondAttribute="bottom" constant="8" id="lQy-GB-aNt"/>
+                            <constraint firstAttribute="trailing" secondItem="5AD-iK-b6N" secondAttribute="trailing" id="zmT-Zi-ef8"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="New Post" id="LtY-IK-FAM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zOx-Xo-RXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="391" y="1391"/>
+            <point key="canvasLocation" x="389.60000000000002" y="1390.2548725637182"/>
         </scene>
     </scenes>
 </document>

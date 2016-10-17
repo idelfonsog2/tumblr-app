@@ -17,8 +17,6 @@ struct Constants {
     static let Authorize = "https://www.tumblr.com/oauth/authorize"
     static let AccessToken = "https://www.tumblr.com/oauth/access_token"
     
-    static let AuthorizationHeader = "Authorization"
-    
     static let RequestURL = "https://api.tumblr.com/v2"
     
     static let scheme = "https"
@@ -33,11 +31,11 @@ struct Methods {
     static let UserInfo = "/user/info"
     static let UserDashboard = "/user/dashboard"
     
+    static let PostText = "/blog/idelfonsog2.tumblr.com/posts/text"
 }
 
 struct ParameterKeys {
     static let Tag = "tag"
-    
 }
 
 

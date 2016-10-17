@@ -9,20 +9,22 @@
 import UIKit
 import OAuthSwift
 
-class TMSearchViewController: UIViewController  {
+class TMSearchViewController: UIViewController {
     
     //MARK: Properties
     var oauth1swift: OAuth1Swift? = nil
     
     //MARK: IBOutlets
-    @IBAction func dismissButton(_ sender: AnyObject) {
-        self.dismiss(animated: true, completion: nil)
-    }
+    
+    
+    //MARK: Delegates
+    var searchTextFieldDelegate = SearchTextFieldDelegate()
     
     //MAR: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.oauth1swift = TMClient.sharedInstance().oauth1swift as! OAuth1Swift?
+        
         oauth1swift!.client.request(
             TMClient.sharedInstance().tumblrURL(withPathExtension: Methods.UserInfo),
             method: .GET,
@@ -37,5 +39,4 @@ class TMSearchViewController: UIViewController  {
                 print(error)
         })
     }
-    
 }
