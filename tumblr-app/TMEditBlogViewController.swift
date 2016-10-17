@@ -31,7 +31,6 @@ class TMEditBlogViewController: UIViewController {
         let headers = ["Accept": "application/json", "Content-Type":"application/json"]
         let parameters = [ParameterKeys.BlogType:ParameterValues.TextType]
         
-        oauth1swift?.client.post(Methods.PostText, parameters: parameters , headers: headers, body: <#T##Data?#>, success: <#T##OAuthSwiftHTTPRequest.SuccessHandler?##OAuthSwiftHTTPRequest.SuccessHandler?##(Data, HTTPURLResponse) -> Void#>, failure: <#T##OAuthSwiftHTTPRequest.FailureHandler?##OAuthSwiftHTTPRequest.FailureHandler?##(OAuthSwiftError) -> Void#>)
     }
     
     //MARK: Helpers
