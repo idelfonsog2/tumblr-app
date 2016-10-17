@@ -209,6 +209,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="New Post" id="LtY-IK-FAM"/>
+                    <connections>
+                        <outlet property="textBlog" destination="5AD-iK-b6N" id="KT4-Vc-xYy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zOx-Xo-RXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
