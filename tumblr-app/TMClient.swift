@@ -10,12 +10,6 @@ import UIKit
 
 class TMClient: NSObject {
     
-    let session = URLSession.shared
-    
-    var requestToken: String?
-    var sessionID: String?
-    var userID: Int?
-    
     // MARK: Helpers
     
     // substitute the key for the value that is contained within the method name
@@ -27,6 +21,39 @@ class TMClient: NSObject {
         }
     }
     
+
+    func tumblrURL(withPathExtension: String) -> String
+    {
+        //URI Structure
+        var components = URLComponents()
+        components.scheme = Constants.scheme
+        components.host = Constants.host
+        components.path = Constants.path + withPathExtension
+        
+        return components.url!.absoluteString
+    }
+    
+    func convertToJSONObject(data: Data) -> [String:AnyObject] {
+        
+        var parsedResult: Any!
+        do {
+            parsedResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions())
+        } catch {
+            print("Could not parse JSON data")
+        }
+        
+        return parsedResult as! [String : AnyObject]
+    }
+    
+    // MARK: Shared Instance
+    
+    class func sharedInstance() -> TMClient {
+        struct Singleton {
+            static var sharedInstance = TMClient()
+        }
+        return Singleton.sharedInstance
+    }
+
 
 
     

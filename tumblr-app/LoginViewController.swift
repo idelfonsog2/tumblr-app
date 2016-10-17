@@ -44,12 +44,10 @@ class LoginViewController: UIViewController, SFSafariViewControllerDelegate {
             print(credential.oauthTokenSecret)
             
             oauth1swift.client.request(
-                self.tumblrURL(withPathExtension: Methods.UserInfo),
+                TMClient.sharedInstance().tumblrURL(withPathExtension: Methods.UserInfo),
                 method: .GET,
                 success: { data, response in
-//                    let dataString = String(data: data, encoding: String.Encoding.utf8)
-//                    print(dataString)
-                    var json = self.convertToJSONObject(data: data)
+                    let json = TMClient.sharedInstance().convertToJSONObject(data: data)
                     print(json)
                     
                 }, failure: {
@@ -58,7 +56,7 @@ class LoginViewController: UIViewController, SFSafariViewControllerDelegate {
             })
             
             //present navigation view controller modally
-            self.openNavigationView()
+            self.openNavigationView(authentication: oauth1swift)
             }, failure: { (error) in
                 self.presentAlert(title: "Error", message: "User has cancel approval")
                 print(error)
@@ -76,35 +74,13 @@ class LoginViewController: UIViewController, SFSafariViewControllerDelegate {
     }
     
     
-    func openNavigationView() {
+    func openNavigationView(authentication: OAuth1Swift) {
         let controller = storyboard?.instantiateViewController(withIdentifier: "TMNavigationViewController") as! TMNavigationViewController
-        
+        controller.oauth1swift = authentication
         self.present(controller, animated: true, completion: nil)
     }
     
-    //MARK: Tumblr API endpoint
-    func tumblrURL(withPathExtension: String) -> String
-    {
-        //URI Structure
-        var components = URLComponents()
-        components.scheme = Constants.scheme
-        components.host = Constants.host
-        components.path = Constants.path + withPathExtension
-        
-        return components.url!.absoluteString
-    }
     
-    func convertToJSONObject(data: Data) -> [String:AnyObject] {
-        
-        var parsedResult: Any!
-        do {
-            parsedResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions())
-        } catch {
-            print("Could not parse JSON data")
-        }
-        
-        return parsedResult as! [String : AnyObject]
-    }
     
 
 }
