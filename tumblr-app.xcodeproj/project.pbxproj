@@ -103,6 +103,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C98CF081DB56C45009A03C1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6CE79F8D1DB2BF690059C19B /* LoginViewController.swift */,
+				6C55B0721DB503FE00AA8B2B /* TMSearchViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		6CE79F7F1DB2BF690059C19B = {
 			isa = PBXGroup;
 			children = (
@@ -124,9 +133,8 @@
 			children = (
 				6CE79F9D1DB2BFA80059C19B /* OAuthSwift.xcodeproj */,
 				6CE79F8B1DB2BF690059C19B /* AppDelegate.swift */,
-				6CE79F8D1DB2BF690059C19B /* LoginViewController.swift */,
-				6C55B0721DB503FE00AA8B2B /* TMSearchViewController.swift */,
 				6CE79FB91DB2C2F60059C19B /* Model */,
+				6C98CF081DB56C45009A03C1 /* Controller */,
 				6CE79F8F1DB2BF690059C19B /* Main.storyboard */,
 				6CE79F921DB2BF6A0059C19B /* Assets.xcassets */,
 				6CE79F941DB2BF6A0059C19B /* LaunchScreen.storyboard */,

@@ -8,21 +8,18 @@
 
 import UIKit
 import OAuthSwift
-import SafariServices
 
-class LoginViewController: UIViewController, SFSafariViewControllerDelegate {
+
+class LoginViewController: UIViewController {
 
     //MARK: IBOutlets
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var debugLabel: UILabel!
     
-    //MARK: Properties
-    var safari: SafariURLHandler?
 
     //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        safari?.delegate = self
     }
 
     //MARK: IBActions
