@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6C55B0731DB503FE00AA8B2B /* TMNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C55B0721DB503FE00AA8B2B /* TMNavigationViewController.swift */; };
+		6C55B0731DB503FE00AA8B2B /* TMSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C55B0721DB503FE00AA8B2B /* TMSearchViewController.swift */; };
 		6CE79F8C1DB2BF690059C19B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE79F8B1DB2BF690059C19B /* AppDelegate.swift */; };
 		6CE79F8E1DB2BF690059C19B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE79F8D1DB2BF690059C19B /* LoginViewController.swift */; };
 		6CE79F911DB2BF690059C19B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CE79F8F1DB2BF690059C19B /* Main.storyboard */; };
@@ -78,7 +78,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6C55B0721DB503FE00AA8B2B /* TMNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TMNavigationViewController.swift; path = ../TMNavigationViewController.swift; sourceTree = "<group>"; };
+		6C55B0721DB503FE00AA8B2B /* TMSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TMSearchViewController.swift; path = ../TMSearchViewController.swift; sourceTree = "<group>"; };
 		6CE79F881DB2BF690059C19B /* tumblr-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tumblr-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CE79F8B1DB2BF690059C19B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CE79F8D1DB2BF690059C19B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 				6CE79F9D1DB2BFA80059C19B /* OAuthSwift.xcodeproj */,
 				6CE79F8B1DB2BF690059C19B /* AppDelegate.swift */,
 				6CE79F8D1DB2BF690059C19B /* LoginViewController.swift */,
-				6C55B0721DB503FE00AA8B2B /* TMNavigationViewController.swift */,
+				6C55B0721DB503FE00AA8B2B /* TMSearchViewController.swift */,
 				6CE79FB91DB2C2F60059C19B /* Model */,
 				6CE79F8F1DB2BF690059C19B /* Main.storyboard */,
 				6CE79F921DB2BF6A0059C19B /* Assets.xcassets */,
@@ -302,7 +302,7 @@
 				6CE79F8E1DB2BF690059C19B /* LoginViewController.swift in Sources */,
 				6CE79FC61DB2C9EB0059C19B /* TMConstants.swift in Sources */,
 				6CE79F8C1DB2BF690059C19B /* AppDelegate.swift in Sources */,
-				6C55B0731DB503FE00AA8B2B /* TMNavigationViewController.swift in Sources */,
+				6C55B0731DB503FE00AA8B2B /* TMSearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

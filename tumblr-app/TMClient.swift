@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import OAuthSwift
 
 class TMClient: NSObject {
     
+    //MARK: Properties
+    var oauth1swift: OAuthSwift? = nil
+    var authToken: String? = nil
+    var oauthTokenSecret: String? = nil
     // MARK: Helpers
     
     // substitute the key for the value that is contained within the method name

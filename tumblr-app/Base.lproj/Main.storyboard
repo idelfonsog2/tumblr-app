@@ -74,7 +74,7 @@
             </objects>
             <point key="canvasLocation" x="120.8" y="119.1904047976012"/>
         </scene>
-        <!--Item 2-->
+        <!--Search-->
         <scene sceneID="1jf-Ka-aSr">
             <objects>
                 <viewController id="RMz-KL-2mM" sceneMemberID="viewController">
@@ -87,11 +87,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="3og-rP-h06"/>
+                    <tabBarItem key="tabBarItem" title="Search" id="3og-rP-h06"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L1a-30-dRq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2669" y="915"/>
+            <point key="canvasLocation" x="1209" y="1390"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ebc-gF-Dcp">
@@ -106,11 +106,12 @@
                     <connections>
                         <segue destination="RMz-KL-2mM" kind="relationship" relationship="viewControllers" id="7bW-09-6Tt"/>
                         <segue destination="PQw-50-Hpw" kind="relationship" relationship="viewControllers" id="7Ho-ri-g2Q"/>
+                        <segue destination="uFO-fR-KTD" kind="relationship" relationship="viewControllers" id="AJJ-9J-opK"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NV4-qf-KaL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1716" y="588"/>
+            <point key="canvasLocation" x="1588" y="477"/>
         </scene>
         <!--List of blogs-->
         <scene sceneID="dcA-Zx-boU">
@@ -129,12 +130,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HJW-Tg-dQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2677" y="239"/>
+            <point key="canvasLocation" x="2025" y="1390"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mx0-BC-M1t">
             <objects>
-                <navigationController id="Rgf-YQ-oe7" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="ManagerNavigationController" id="Rgf-YQ-oe7" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TgP-VE-pLr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -145,12 +146,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r2q-jm-AOO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="827" y="284"/>
+            <point key="canvasLocation" x="804" y="119"/>
         </scene>
-        <!--Navigation View Controller-->
+        <!--New Post-->
         <scene sceneID="JsM-D5-dQ8">
             <objects>
-                <viewController storyboardIdentifier="TMNavigationViewController" id="uFO-fR-KTD" customClass="TMNavigationViewController" customModule="tumblr_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="uFO-fR-KTD" customClass="TMSearchViewController" customModule="tumblr_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dGm-oK-Pm0"/>
                         <viewControllerLayoutGuide type="bottom" id="XOt-1V-3Si"/>
@@ -160,14 +161,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yyG-1z-vwN">
-                                <frame key="frameInset" minX="16" minY="28" width="343" height="30"/>
+                                <frame key="frameInset" minX="16" minY="91" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hah-2U-lhp">
-                                <frame key="frameInset" minX="140" minY="424" width="94" height="30"/>
+                                <frame key="frameInset" minX="16" minY="143" width="94" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="dismiss"/>
                                 <connections>
@@ -177,10 +178,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="New Post" id="LtY-IK-FAM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zOx-Xo-RXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="108" y="789.35532233883066"/>
+            <point key="canvasLocation" x="391" y="1391"/>
         </scene>
     </scenes>
 </document>

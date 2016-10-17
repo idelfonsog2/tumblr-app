@@ -1,5 +1,5 @@
 //
-//  TMNavigationViewController.swift
+//  TMSearchViewController.swift
 //  tumblr-app
 //
 //  Created by Idelfonso on 10/17/16.
@@ -9,10 +9,10 @@
 import UIKit
 import OAuthSwift
 
-class TMNavigationViewController: UIViewController  {
+class TMSearchViewController: UIViewController  {
     
     //MARK: Properties
-    var oauth1swift: OAuth1Swift!
+    var oauth1swift: OAuth1Swift? = nil
     
     //MARK: IBOutlets
     @IBAction func dismissButton(_ sender: AnyObject) {
@@ -22,21 +22,20 @@ class TMNavigationViewController: UIViewController  {
     //MAR: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.oauth1swift.client.request(
+        self.oauth1swift = TMClient.sharedInstance().oauth1swift as! OAuth1Swift?
+        oauth1swift!.client.request(
             TMClient.sharedInstance().tumblrURL(withPathExtension: Methods.UserInfo),
             method: .GET,
             success: {
                 data, response in
                 let json = TMClient.sharedInstance().convertToJSONObject(data: data)
                 print(json)
-                
+            
             },
             failure: {
                 error in
                 print(error)
         })
-        
-
     }
     
 }

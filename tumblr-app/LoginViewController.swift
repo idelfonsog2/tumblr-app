@@ -27,7 +27,20 @@ class LoginViewController: UIViewController, SFSafariViewControllerDelegate {
 
     //MARK: IBActions
     @IBAction func loginWithTumblr(_ sender: AnyObject) {
+        self.loginWithOauth()
+    }
     
+    //MARK: Alerts
+    func presentAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    //MARK: Helpers
+    
+    private func loginWithOauth() {
         //Set OAuth
         let oauth1swift = OAuth1Swift(
             consumerKey: Constants.ConsumerKey,
@@ -36,9 +49,11 @@ class LoginViewController: UIViewController, SFSafariViewControllerDelegate {
             authorizeUrl: Constants.Authorize,
             accessTokenUrl: Constants.AccessToken)
         
+        TMClient.sharedInstance().oauth1swift = oauth1swift
+        
         //Make Authorization request
         oauth1swift.authorizeURLHandler = SafariURLHandler(viewController: self, oauthSwift: oauth1swift)
-
+        
         oauth1swift.authorize(withCallbackURL: "tumblr-app://oauth-callback", success: { (credential, response, parameter) in
             print(credential.oauthToken)
             print(credential.oauthTokenSecret)
@@ -56,27 +71,16 @@ class LoginViewController: UIViewController, SFSafariViewControllerDelegate {
             })
             
             //present navigation view controller modally
-            self.openNavigationView(authentication: oauth1swift)
+            self.openNavigationView()
             }, failure: { (error) in
                 self.presentAlert(title: "Error", message: "User has cancel approval")
                 print(error)
         })
-        
-
-    }
-    
-    //MARK: Alerts
-    func presentAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        
-        self.present(alert, animated: true, completion: nil)
     }
     
     
-    func openNavigationView(authentication: OAuth1Swift) {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "TMNavigationViewController") as! TMNavigationViewController
-        controller.oauth1swift = authentication
+    func openNavigationView() {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "ManagerNavigationController") as! UINavigationController
         self.present(controller, animated: true, completion: nil)
     }
     
