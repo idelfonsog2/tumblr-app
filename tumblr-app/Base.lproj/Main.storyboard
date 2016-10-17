@@ -9,7 +9,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="tumblr_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="tumblr_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -63,7 +63,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.47021949291229248" green="0.66132313013076782" blue="0.91043704748153687" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.084721021354198456" green="0.25935593247413635" blue="0.40347123146057129" alpha="0.8068011558219178" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="debugLabel" destination="PKF-1k-I6M" id="Yqt-UE-9Qg"/>
@@ -73,6 +73,114 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="120.8" y="119.1904047976012"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="1jf-Ka-aSr">
+            <objects>
+                <viewController id="RMz-KL-2mM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gVr-qM-2Dn"/>
+                        <viewControllerLayoutGuide type="bottom" id="dWu-do-kaH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K6k-wb-I7p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="3og-rP-h06"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L1a-30-dRq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2669" y="915"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ebc-gF-Dcp">
+            <objects>
+                <tabBarController id="XpE-oV-nd5" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="cEu-WN-TvT"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="J2r-T7-bOD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="RMz-KL-2mM" kind="relationship" relationship="viewControllers" id="7bW-09-6Tt"/>
+                        <segue destination="PQw-50-Hpw" kind="relationship" relationship="viewControllers" id="7Ho-ri-g2Q"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NV4-qf-KaL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1716" y="588"/>
+        </scene>
+        <!--List of blogs-->
+        <scene sceneID="dcA-Zx-boU">
+            <objects>
+                <viewController id="PQw-50-Hpw" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pbc-se-vfs"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vrl-A9-n0r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UZb-9l-4Bl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="List of blogs" id="7b8-lR-FUP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HJW-Tg-dQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2677" y="239"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mx0-BC-M1t">
+            <objects>
+                <navigationController id="Rgf-YQ-oe7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TgP-VE-pLr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="XpE-oV-nd5" kind="relationship" relationship="rootViewController" id="hdi-GN-vfa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r2q-jm-AOO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="827" y="284"/>
+        </scene>
+        <!--Navigation View Controller-->
+        <scene sceneID="JsM-D5-dQ8">
+            <objects>
+                <viewController storyboardIdentifier="TMNavigationViewController" id="uFO-fR-KTD" customClass="TMNavigationViewController" customModule="tumblr_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dGm-oK-Pm0"/>
+                        <viewControllerLayoutGuide type="bottom" id="XOt-1V-3Si"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WM2-Ww-eRn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yyG-1z-vwN">
+                                <frame key="frameInset" minX="16" minY="28" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hah-2U-lhp">
+                                <frame key="frameInset" minX="140" minY="424" width="94" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="dismiss"/>
+                                <connections>
+                                    <action selector="dismissButton:" destination="uFO-fR-KTD" eventType="touchUpInside" id="OId-hS-uMX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zOx-Xo-RXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="108" y="789.35532233883066"/>
         </scene>
     </scenes>
 </document>

@@ -28,15 +28,6 @@ class TMClient: NSObject {
     }
     
 
-    //MARK: Tumblr API endpoint
-    func tumblrURL(withPathExtension: String? = nil) -> URL {
-        //URI Structure
-        var components = URLComponents()
-        components.scheme = Constants.scheme
-        components.host = Constants.host
-        components.path = Constants.path + withPathExtension!
-        
-        return components.url!
-    }
+
     
 }
