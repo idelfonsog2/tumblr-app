@@ -36,13 +36,26 @@ class TMEditBlogViewController: UIViewController, UITextFieldDelegate {
             (data, error) in
             let json = TMClient.sharedInstance().convertToJSONObject(data: data)
             
+            guard let meta = json["meta"] as? [String:AnyObject] else {
+                print("Did not fina 'meta' key in the parse json \(json)")
+                return
+            }
+
+            guard let msg = meta["msg"] as? String else {
+                print("Did not find a 'msg' key in the meta object")
+                return
+            }
+            
+            if msg == "Created" {
+                self.displayAlert(text: "Text Posted")
+            }
+            
             }, failure: {
                 error in
                 print(error)
         })
 
     }
-
     
     //MARK: Helpers
     func displayStatus(message: String) {
@@ -53,13 +66,28 @@ class TMEditBlogViewController: UIViewController, UITextFieldDelegate {
     //MARK: Alert
 
     func displayAlert(text: String) {
-        let alert = UIAlertController(title: "Result", message: text, preferredStyle: .actionSheet)
+        
+        let alert = UIAlertController(title: "Result", message: text, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: {
+            result in
+            
+            print("ok")
+            
+            self.textBlog.text = ""
+        })
+        
+        alert.addAction(okAction)
         
         self.present(alert, animated: true, completion: nil)
     }
     
     //MARK: UITextFieldDelegate
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.text?.removeAll(keepingCapacity: true)
+        textBlog.text = ""
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return true
     }
 }
