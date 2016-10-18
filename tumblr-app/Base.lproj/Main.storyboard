@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -174,32 +173,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5AD-iK-b6N">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Starting writting here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5AD-iK-b6N">
+                                <color key="backgroundColor" red="0.2261623740196228" green="0.27677661180496216" blue="0.35995441675186157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uAS-sb-Cie">
-                                <state key="normal" title="Post"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngp-gN-8Mb">
-                                <frame key="frameInset" minX="172" minY="580" width="31" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Post"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngp-gN-8Mb">
+                                <color key="backgroundColor" red="1" green="0.59570608083027743" blue="0.14005287860212234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Post">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="postTextBlog:" destination="uFO-fR-KTD" eventType="touchUpInside" id="ljh-pu-dMN"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.226162374" green="0.27677661180000002" blue="0.35995441680000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="XOt-1V-3Si" firstAttribute="top" secondItem="uAS-sb-Cie" secondAttribute="bottom" constant="8" id="76r-cl-hVU"/>
+                            <constraint firstItem="Ngp-gN-8Mb" firstAttribute="top" secondItem="5AD-iK-b6N" secondAttribute="bottom" constant="1" id="6sL-Im-bLr"/>
                             <constraint firstItem="5AD-iK-b6N" firstAttribute="leading" secondItem="WM2-Ww-eRn" secondAttribute="leading" id="7Pp-Hl-ptM"/>
-                            <constraint firstItem="uAS-sb-Cie" firstAttribute="top" secondItem="5AD-iK-b6N" secondAttribute="bottom" constant="8" id="NfE-DN-2vf"/>
+                            <constraint firstItem="XOt-1V-3Si" firstAttribute="top" secondItem="Ngp-gN-8Mb" secondAttribute="bottom" id="REt-S2-eew"/>
+                            <constraint firstAttribute="trailing" secondItem="Ngp-gN-8Mb" secondAttribute="trailing" id="SJv-E6-25H"/>
+                            <constraint firstItem="Ngp-gN-8Mb" firstAttribute="leading" secondItem="WM2-Ww-eRn" secondAttribute="leading" id="THY-4v-oTG"/>
                             <constraint firstItem="5AD-iK-b6N" firstAttribute="top" secondItem="dGm-oK-Pm0" secondAttribute="bottom" constant="8" id="lQy-GB-aNt"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uAS-sb-Cie" secondAttribute="trailing" constant="156" id="qfr-QV-deh"/>
-                            <constraint firstItem="uAS-sb-Cie" firstAttribute="leading" secondItem="WM2-Ww-eRn" secondAttribute="leadingMargin" constant="156" id="ymN-aT-EjF"/>
                             <constraint firstAttribute="trailing" secondItem="5AD-iK-b6N" secondAttribute="trailing" id="zmT-Zi-ef8"/>
                         </constraints>
                     </view>

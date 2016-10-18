@@ -54,6 +54,12 @@ class TMEditBlogViewController: UIViewController, UITextFieldDelegate {
 
     func displayAlert(text: String) {
         let alert = UIAlertController(title: "Result", message: text, preferredStyle: .actionSheet)
+        
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    //MARK: UITextFieldDelegate
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.text?.removeAll(keepingCapacity: true)
     }
 }
