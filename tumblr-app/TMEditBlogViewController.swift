@@ -39,8 +39,8 @@ class TMEditBlogViewController: UIViewController {
         oauth1swift?.client.post(Methods.PostText, parameters: parameters , headers: headers, body: nil, success: {
                 (data, error) in
                 let json = TMClient.sharedInstance().convertToJSONObject(data: data)
-                let vody = 
-            self.displayAlert(text: )
+                print(json)
+            
             }, failure: {
                 error in
                 print(error)
@@ -57,5 +57,6 @@ class TMEditBlogViewController: UIViewController {
 
     func displayAlert(text: String) {
         let alert = UIAlertController(title: "Result", message: text, preferredStyle: .actionSheet)
+        self.present(alert, animated: true, completion: nil)
     }
 }
