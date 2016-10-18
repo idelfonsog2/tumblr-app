@@ -20,17 +20,31 @@ class TMEditBlogViewController: UIViewController {
     //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Post", style: .done, target: self, action: #selector(TMEditBlogViewController.postBlog))
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Post", style: .done, target: self, action: #selector(TMEditBlogViewController.postTextBlog))
+        
         self.oauth1swift = TMClient.sharedInstance().oauth1swift as! OAuth1Swift?
     }
     
     //MARK: Actions
-    func postBlog() {
+    func postTextBlog() {
+       
         print(oauth1swift?.parameters)
-        let headers = ["Accept": "application/json", "Content-Type":"application/json"]
-        let parameters = [ParameterKeys.BlogType:ParameterValues.TextType]
         
+        let headers = ["Accept": "application/json", "Content-Type":"application/json"]
+        
+        let parameters = [ParameterKeys.BlogType:ParameterValues.TextType, ParameterKeys.Body:textBlog.text] as [String : Any]
+        
+        
+        oauth1swift?.client.post(Methods.PostText, parameters: parameters , headers: headers, body: nil, success: {
+                (data, error) in
+                let json = TMClient.sharedInstance().convertToJSONObject(data: data)
+                let vody = 
+            self.displayAlert(text: )
+            }, failure: {
+                error in
+                print(error)
+        })
     }
     
     //MARK: Helpers
@@ -38,5 +52,10 @@ class TMEditBlogViewController: UIViewController {
         //Status from the post update
     }
 
+    
+    //MARK: Alert
 
+    func displayAlert(text: String) {
+        let alert = UIAlertController(title: "Result", message: text, preferredStyle: .actionSheet)
+    }
 }

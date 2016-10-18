@@ -12,9 +12,9 @@ import OAuthSwift
 class TMClient: NSObject {
     
     //MARK: Properties
-    var oauth1swift: OAuthSwift? = nil
-    var authToken: String? = nil
-    var oauthTokenSecret: String? = nil
+    var oauth1swift: OAuthSwift?    = nil
+    var authToken: String?          = nil
+    var oauthTokenSecret: String?   = nil
     // MARK: Helpers
     
     // substitute the key for the value that is contained within the method name
@@ -27,24 +27,25 @@ class TMClient: NSObject {
     }
     
 
-    func tumblrURL(withPathExtension: String) -> String
-    {
+    func tumblrURL(withPathExtension: String) -> String {
         //URI Structure
         var components = URLComponents()
-        components.scheme = Constants.scheme
-        components.host = Constants.host
-        components.path = Constants.path + withPathExtension
+        
+        components.scheme   = Constants.scheme
+        components.host     = Constants.host
+        components.path     = Constants.path + withPathExtension
         
         return components.url!.absoluteString
     }
     
-    func convertToJSONObject(data: Data) -> [String:AnyObject] {
+    func convertToJSONObject(data: Data) -> [String: AnyObject]{
         
         var parsedResult: Any!
+        
         do {
             parsedResult = try JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions())
         } catch {
-            print("Could not parse JSON data")
+            print("Could not parse data to JSON")
         }
         
         return parsedResult as! [String : AnyObject]

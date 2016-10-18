@@ -32,7 +32,6 @@ class TMSearchViewController: UIViewController {
                 data, response in
                 let json = TMClient.sharedInstance().convertToJSONObject(data: data)
                 print(json)
-            
             },
             failure: {
                 error in
