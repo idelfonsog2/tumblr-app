@@ -9,7 +9,7 @@
 import UIKit
 import OAuthSwift
 
-class TMEditBlogViewController: UIViewController {
+class TMEditBlogViewController: UIViewController, UITextFieldDelegate {
 
     //MAR: Properties
     var oauth1swift: OAuth1Swift? = nil
@@ -31,8 +31,8 @@ class TMEditBlogViewController: UIViewController {
             ParameterKeys.ApiKey: ParameterValues.ApiKey,
             ParameterKeys.BlogType: ParameterValues.TextType,
             ParameterKeys.BlogFormat: ParameterValues.MarkdownType,
-            ParameterKeys.Body: "my%20blog%20text" // maybe "my%20blog%20text"
-        ]
+            ParameterKeys.Body: textBlog.text
+        ] as [String : Any]
         
         oauth1swift?.client.request(TMClient.sharedInstance().tumblrURL(withPathExtension: Methods.PostText), method: .POST, parameters: parameters, headers: nil, success: {
             (data, error) in
@@ -43,16 +43,6 @@ class TMEditBlogViewController: UIViewController {
                 error in
                 print(error)
         })
-        
-//        oauth1swift?.client.post(TMClient.sharedInstance().tumblrURL(withPathExtension: Methods.PostText), parameters: parameters, headers: headers, body: nil, success: {
-//            (data, error) in
-//            let json = TMClient.sharedInstance().convertToJSONObject(data: data)
-//            print(json)
-//            
-//            }, failure: {
-//                error in
-//                print(error)
-//        })
 
     }
 
