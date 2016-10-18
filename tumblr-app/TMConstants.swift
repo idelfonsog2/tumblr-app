@@ -84,8 +84,10 @@ struct ParameterValues {
         //Format Type
         static let HTMLType = "html"
         static let MarkdownType = "markdown"
-    
-    
+}
+
+struct ResponseKeys {
+    static let Meta = "meta"
 }
 
 
