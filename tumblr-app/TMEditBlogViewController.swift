@@ -25,21 +25,34 @@ class TMEditBlogViewController: UIViewController {
     
     //MARK: Actions
     @IBAction func postTextBlog(_ sender: AnyObject) {
-        let headers = ["Accept": "application/json", "Content-Type":"application/json; charset=utf-8"]
+        let headers = ["Content-Type":"application/json; charset=utf-8"]
         
-        let parameters = [ParameterKeys.BlogType:ParameterValues.MarkdownType, ParameterKeys.Body:textBlog.text] as [String : Any]
+        let parameters = [
+            ParameterKeys.ApiKey: ParameterValues.ApiKey,
+            ParameterKeys.BlogType: ParameterValues.TextType,
+            ParameterKeys.BlogFormat: ParameterValues.MarkdownType,
+            ParameterKeys.Body: "my%20blog%20text" // maybe "my%20blog%20text"
+        ]
         
-        oauth1swift?.client.request(TMClient.sharedInstance().tumblrURL(withPathExtension: Methods.PostText), method: .POST, parameters: parameters, headers: headers, success: {
+        oauth1swift?.client.request(TMClient.sharedInstance().tumblrURL(withPathExtension: Methods.PostText), method: .POST, parameters: parameters, headers: nil, success: {
             (data, error) in
             let json = TMClient.sharedInstance().convertToJSONObject(data: data)
             print(json)
-            print("hello")
             
             }, failure: {
                 error in
                 print(error)
         })
         
+//        oauth1swift?.client.post(TMClient.sharedInstance().tumblrURL(withPathExtension: Methods.PostText), parameters: parameters, headers: headers, body: nil, success: {
+//            (data, error) in
+//            let json = TMClient.sharedInstance().convertToJSONObject(data: data)
+//            print(json)
+//            
+//            }, failure: {
+//                error in
+//                print(error)
+//        })
 
     }
 
