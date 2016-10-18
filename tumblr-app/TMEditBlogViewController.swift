@@ -20,32 +20,29 @@ class TMEditBlogViewController: UIViewController {
     //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Post", style: .done, target: self, action: #selector(TMEditBlogViewController.postTextBlog))
-        
         self.oauth1swift = TMClient.sharedInstance().oauth1swift as! OAuth1Swift?
     }
     
     //MARK: Actions
-    func postTextBlog() {
-       
-        print(oauth1swift?.parameters)
+    @IBAction func postTextBlog(_ sender: AnyObject) {
+        let headers = ["Accept": "application/json", "Content-Type":"application/json; charset=utf-8"]
         
-        let headers = ["Accept": "application/json", "Content-Type":"application/json"]
+        let parameters = [ParameterKeys.BlogType:ParameterValues.MarkdownType, ParameterKeys.Body:textBlog.text] as [String : Any]
         
-        let parameters = [ParameterKeys.BlogType:ParameterValues.TextType, ParameterKeys.Body:textBlog.text] as [String : Any]
-        
-        
-        oauth1swift?.client.post(Methods.PostText, parameters: parameters , headers: headers, body: nil, success: {
-                (data, error) in
-                let json = TMClient.sharedInstance().convertToJSONObject(data: data)
-                print(json)
+        oauth1swift?.client.request(TMClient.sharedInstance().tumblrURL(withPathExtension: Methods.PostText), method: .POST, parameters: parameters, headers: headers, success: {
+            (data, error) in
+            let json = TMClient.sharedInstance().convertToJSONObject(data: data)
+            print(json)
+            print("hello")
             
             }, failure: {
                 error in
                 print(error)
         })
+        
+
     }
+
     
     //MARK: Helpers
     func displayStatus() {
