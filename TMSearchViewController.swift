@@ -31,15 +31,19 @@ class TMSearchViewController: UIViewController, UITextFieldDelegate {
         //constantly keep searching with the addition of new chars
         let oldText = textField.text! as NSString
         
-        var newText = oldText.replacingCharacters(in: range, with: string)
-
-        print(newText)
+        let newText = oldText.replacingCharacters(in: range, with: string)
         
-        var parameters = [ParameterKeys.ApiKey: ParameterValues.ApiKey, ParameterKeys.Tag: newText] as [String : Any]
+        //Query parameters for Search/Tagged API call
+        let parameters = [
+            ParameterKeys.ApiKey: ParameterValues.ApiKey,
+            ParameterKeys.Tag: newText,
+            ParameterKeys.Limit: ParameterValues.Limit
+            ] as [String : Any]
         
-        //Request call to /tagged with search tags
+        //GET Request
         oauth1swift?.client.request(TMClient.sharedInstance().tumblrURL(withPathExtension: Methods.Tagged), method: .GET, parameters: parameters, headers: nil, success: {
             (data, error) in
+            
             let json = TMClient.sharedInstance().convertToJSONObject(data: data)
             
             print(json)
@@ -49,7 +53,6 @@ class TMSearchViewController: UIViewController, UITextFieldDelegate {
                 
                 print(error)
                 
-                print("\(TMClient.sharedInstance().tumblrURL(withPathExtension: Methods.Tagged))\(parameters)")
         })
 
         

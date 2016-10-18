@@ -42,12 +42,13 @@ struct Methods {
 struct ParameterKeys {
     //Include when required
     static let ApiKey   = "api_key"
-    
+
+//MARK: Search/Tagged ParamKeys
     //Search method
     static let Tag  = "tag"     // *req
+    static let Limit = "limit"
     
-    //MARK: Blog Param Keys
-    
+//MARK: Blog ParamKeys
     //Post blog
     static let BlogType     = "type"    // *req
     static let BlogState    = "state"
@@ -70,9 +71,13 @@ struct ParameterKeys {
 }
 
 struct ParameterValues {
-    //API
-    static let ApiKey = "JbdFQBF6QQUILBRXhVgc2PKOhWs3mGMfi57KswESEUoC1z1Hls"
+    //MARK: API
+    static let ApiKey   = "JbdFQBF6QQUILBRXhVgc2PKOhWs3mGMfi57KswESEUoC1z1Hls"
     
+//MARK: Search/Tagged ParamValues
+    static let Limit    = 20
+    
+//MARK: Blog ParamValues
     //Blog Post Type Values
     static let TextType     = "text"
     static let PhotoType    = "photo"

@@ -25,6 +25,8 @@ class TMEditBlogViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: Actions
     @IBAction func postTextBlog(_ sender: AnyObject) {
+        
+        //Query parameters for /post API call
         let parameters = [
             ParameterKeys.ApiKey: ParameterValues.ApiKey,
             ParameterKeys.BlogType: ParameterValues.TextType,
@@ -32,6 +34,7 @@ class TMEditBlogViewController: UIViewController, UITextFieldDelegate {
             ParameterKeys.Body: textBlog.text
         ] as [String : Any]
         
+        //POST Request
         oauth1swift?.client.request(TMClient.sharedInstance().tumblrURL(withPathExtension: Methods.PostText), method: .POST, parameters: parameters, headers: nil, success: {
             (data, error) in
             let json = TMClient.sharedInstance().convertToJSONObject(data: data)
