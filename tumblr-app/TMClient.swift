@@ -15,18 +15,10 @@ class TMClient: NSObject {
     var oauth1swift: OAuthSwift?    = nil
     var authToken: String?          = nil
     var oauthTokenSecret: String?   = nil
+    
+    
     // MARK: Helpers
     
-    // substitute the key for the value that is contained within the method name
-    func substituteKeyInMethod(method: String, key: String, value: String) -> String? {
-        if method.range(of:"{\(key)}") != nil {
-            return method.replacingOccurrences(of: "{\(key)}", with: value)
-        } else {
-            return nil
-        }
-    }
-    
-
     func tumblrURL(withPathExtension: String) -> String {
         //URI Structure
         var components = URLComponents()
