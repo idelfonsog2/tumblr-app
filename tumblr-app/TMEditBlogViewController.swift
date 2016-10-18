@@ -59,13 +59,7 @@ class TMEditBlogViewController: UIViewController, UITextFieldDelegate {
         })
 
     }
-    
-    //MARK: Helpers
-    func displayStatus(message: String) {
-        //Status from the post update
-    }
-
-    
+      
     //MARK: Alert
 
     func displayAlert(text: String) {
