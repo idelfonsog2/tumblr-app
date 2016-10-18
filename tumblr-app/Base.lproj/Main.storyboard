@@ -94,6 +94,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" id="3og-rP-h06"/>
+                    <connections>
+                        <outlet property="searchText" destination="MRh-BM-Iyw" id="uaR-MB-ybf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L1a-30-dRq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

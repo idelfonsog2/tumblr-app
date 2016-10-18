@@ -44,7 +44,7 @@ struct ParameterKeys {
     static let ApiKey   = "api_key"
     
     //Search method
-    static let Tag  = "tag"
+    static let Tag  = "tag"     // *req
     
     //MARK: Blog Param Keys
     
