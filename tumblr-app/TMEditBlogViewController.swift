@@ -37,7 +37,7 @@ class TMEditBlogViewController: UIViewController, UITextFieldDelegate {
         //POST Request
         let _ = oauth1swift?.client.request(session.tumblrURL(Methods.PostText), method: .POST, parameters: parameters, headers: nil, success: {
             (data, error) in
-            let json = session.convertToJSONObject(data)
+            let json = self.session.convertToJSONObject(data)
             
             guard let meta = json["meta"] as? [String:AnyObject] else {
                 print("Did not fina 'meta' key in the parse json \(json)")

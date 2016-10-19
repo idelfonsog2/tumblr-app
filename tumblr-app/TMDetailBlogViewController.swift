@@ -15,6 +15,7 @@ class TMDetailBlogViewController: UIViewController {
     var blog: TMBlog?
     var oauth1swift: OAuth1Swift? = nil
     var session = TMClient.sharedInstance()
+    
 
     //MARK: IBOutlets
     @IBOutlet weak var blogNameLabel: UILabel!
@@ -25,6 +26,7 @@ class TMDetailBlogViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         oauth1swift = TMClient.sharedInstance().oauth1swift as! OAuth1Swift?
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,25 +38,59 @@ class TMDetailBlogViewController: UIViewController {
 
     @IBAction func followUser(_ sender: AnyObject) {
         
+        let usersBlogURL = self.getBlogUrl(url: (blog?.url)!)
+        
         //Query Params for /user/foloww
         let parameters = [
-            ParameterKeys.URL: blog?.url,
+            ParameterKeys.URL: usersBlogURL,
             ParameterKeys.ApiKey: ParameterValues.ApiKey
             ]
         
-        let _ = oauth1swift?.client.request(session.tumblrURL(Methods.FollowUser), method: .GET, success: {
+        print("\(session.tumblrURL(Methods.FollowUser))\(parameters)")
+        
+        let _ = oauth1swift?.client.request(session.tumblrURL(Methods.FollowUser), method: .POST, parameters: parameters, headers: nil, success: {
                 (data, error) in
             
             let json = self.session.convertToJSONObject(data)
-            print(json)
-        
+            
+            DispatchQueue.main.async {
+                self.displayAlert("Following user")
+                self.dismiss(animated: true, completion: nil)
+            }
+            
             }, failure: { error in
                 print(error)
         })
         
     }
     
-    @IBOutlet weak var unfollowUser: UIButton!
+    @IBAction func unfollowUser(_ sender: AnyObject) {
+        
+    }
     
+    
+
+    //MARK: Alert
+    
+    func displayAlert(_ text: String) {
+        
+        let alert = UIAlertController(title: "Result", message: text, preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        
+        alert.addAction(okAction)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    //Decompose the URL from search results
+    func getBlogUrl(url: String) -> String {
+        
+        let scheme      = URL(string: url)?.scheme
+        let host        = URL(string: url)?.host
+        
+        return "\(scheme!)://\(host!)"
+    }
 
 }
