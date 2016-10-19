@@ -9,7 +9,7 @@
 import UIKit
 import OAuthSwift
 
-class TMSearchViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
+class TMSearchViewController: UIViewController, UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate {
     
     //MARK: Properties
     var oauth1swift: OAuth1Swift? = nil
@@ -20,10 +20,16 @@ class TMSearchViewController: UIViewController, UITextFieldDelegate, UITableView
     @IBOutlet weak var resultsTable: UITableView!
     
     //MAR: Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.searchText.delegate = self
+        self.blogs = [TMBlog]()
         self.oauth1swift = TMClient.sharedInstance().oauth1swift as! OAuth1Swift?
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
     
     //MAR: UITextFieldDelegate
@@ -56,9 +62,14 @@ class TMSearchViewController: UIViewController, UITextFieldDelegate, UITableView
             if let results = json["response"] as? [[String:AnyObject]] {
                 
                 self.blogs = TMBlog.blogsFromResults(results: results)
+                for blog in self.blogs! {
+                    print(blog.name)
+                }
+
             }
-            
-            print(self.blogs)
+            DispatchQueue.main.async {
+                self.resultsTable.reloadData()
+            }
             
             }, failure: {
                 error in
@@ -78,19 +89,24 @@ class TMSearchViewController: UIViewController, UITextFieldDelegate, UITableView
         return true
     }
     
+    
     //MARK: UITableViewDelegate
-    //Return 5 results per search
+        //Return 5 results per search
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (self.blogs?.count)!
     }
+
     
     //Display name of blog in row text
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchViewCell")!
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SearchViewCell", for: indexPath) as UITableViewCell!
     
-        let blogForRow = self.blogs?[indexPath.row]
-        cell.textLabel?.text = blogForRow?.name
-        return cell
+        let blog = self.blogs?[indexPath.row]
+        
+        cell?.textLabel?.text = "\(blog!.name)"
+        
+        return cell!
     }
     
     
