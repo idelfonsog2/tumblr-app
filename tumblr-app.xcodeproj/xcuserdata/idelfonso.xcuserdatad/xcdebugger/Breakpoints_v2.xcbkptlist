@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "tumblr-app/TMEditBlogViewController.swift"
-            timestampString = "498516135.15803"
+            timestampString = "498527899.016407"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "displayAlert(text:)"
             landmarkType = "7">
          </BreakpointContent>
