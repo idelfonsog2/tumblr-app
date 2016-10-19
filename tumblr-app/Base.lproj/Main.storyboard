@@ -126,6 +126,50 @@
             </objects>
             <point key="canvasLocation" x="1208.8" y="1389.3553223388308"/>
         </scene>
+        <!--Detail Blog View Controller-->
+        <scene sceneID="kBo-GZ-gvv">
+            <objects>
+                <viewController id="pFv-ve-HFp" customClass="TMDetailBlogViewController" customModule="tumblr_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KuU-DC-ecN"/>
+                        <viewControllerLayoutGuide type="bottom" id="xVU-oN-aKH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8xg-Bd-kUG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DL4-HP-Kb6">
+                                <frame key="frameInset" minX="188" minY="264" width="187" height="126"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.55002913004873277" green="1" blue="0.58275409555483104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Follow"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pC0-5D-oFh">
+                                <frame key="frameInset" minY="264" width="180" height="126"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.33052839509150589" blue="0.34076858115293618" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Unfollow"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blog Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2lq-Bf-YaJ">
+                                <frame key="frameInset" minY="70" width="375" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="blogNameLabel" destination="2lq-Bf-YaJ" id="Kej-ja-Oqk"/>
+                        <outlet property="followButton" destination="DL4-HP-Kb6" id="FzS-3A-LUH"/>
+                        <outlet property="unfollowButton" destination="pC0-5D-oFh" id="dZI-12-tN7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qxY-mV-qTJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1189.5999999999999" y="2129.6851574212897"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ebc-gF-Dcp">
             <objects>
@@ -192,7 +236,7 @@
             </objects>
             <point key="canvasLocation" x="804" y="119"/>
         </scene>
-        <!--New Post-->
+        <!--Edit Blog View Controller-->
         <scene sceneID="JsM-D5-dQ8">
             <objects>
                 <viewController id="uFO-fR-KTD" customClass="TMEditBlogViewController" customModule="tumblr_app" customModuleProvider="target" sceneMemberID="viewController">
@@ -232,7 +276,7 @@
                             <constraint firstAttribute="trailing" secondItem="5AD-iK-b6N" secondAttribute="trailing" id="zmT-Zi-ef8"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="New Post" id="LtY-IK-FAM"/>
+                    <tabBarItem key="tabBarItem" id="LtY-IK-FAM"/>
                     <connections>
                         <outlet property="textBlog" destination="5AD-iK-b6N" id="KT4-Vc-xYy"/>
                     </connections>

@@ -21,6 +21,7 @@
 		6CE79FBC1DB2C3120059C19B /* TMClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE79FBB1DB2C3120059C19B /* TMClient.swift */; };
 		6CE79FC61DB2C9EB0059C19B /* TMConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE79FC51DB2C9EB0059C19B /* TMConstants.swift */; };
 		6CFC504D1DB7C77500AD33F1 /* TMBlog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFC504C1DB7C77500AD33F1 /* TMBlog.swift */; };
+		6CFC504F1DB8089D00AD33F1 /* TMDetailBlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFC504E1DB8089D00AD33F1 /* TMDetailBlogViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +53,7 @@
 		6CE79FBB1DB2C3120059C19B /* TMClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMClient.swift; sourceTree = "<group>"; };
 		6CE79FC51DB2C9EB0059C19B /* TMConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMConstants.swift; sourceTree = "<group>"; };
 		6CFC504C1DB7C77500AD33F1 /* TMBlog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMBlog.swift; sourceTree = "<group>"; };
+		6CFC504E1DB8089D00AD33F1 /* TMDetailBlogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMDetailBlogViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				6CE79F8D1DB2BF690059C19B /* LoginViewController.swift */,
 				6C98CF0C1DB578A1009A03C1 /* TMEditBlogViewController.swift */,
+				6CFC504E1DB8089D00AD33F1 /* TMDetailBlogViewController.swift */,
 				6C55B0721DB503FE00AA8B2B /* TMSearchViewController.swift */,
 				6C98CF0E1DB578DC009A03C1 /* TMFollowingViewController.swift */,
 			);
@@ -228,6 +231,7 @@
 			files = (
 				6CE79FBC1DB2C3120059C19B /* TMClient.swift in Sources */,
 				6CE79F8E1DB2BF690059C19B /* LoginViewController.swift in Sources */,
+				6CFC504F1DB8089D00AD33F1 /* TMDetailBlogViewController.swift in Sources */,
 				6C98CF0F1DB578DC009A03C1 /* TMFollowingViewController.swift in Sources */,
 				6CE79FC61DB2C9EB0059C19B /* TMConstants.swift in Sources */,
 				6CFC504D1DB7C77500AD33F1 /* TMBlog.swift in Sources */,

@@ -67,6 +67,8 @@ class TMSearchViewController: UIViewController, UITextFieldDelegate, UITableView
                 }
 
             }
+            
+            //Update Table in main Thread
             DispatchQueue.main.async {
                 self.resultsTable.reloadData()
             }
