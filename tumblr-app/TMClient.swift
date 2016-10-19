@@ -19,7 +19,7 @@ class TMClient: NSObject {
     
     // MARK: Helpers
     
-    func tumblrURL(withPathExtension: String) -> String {
+    func tumblrURL(_ withPathExtension: String) -> String {
         //URI Structure
         var components = URLComponents()
         
@@ -30,7 +30,7 @@ class TMClient: NSObject {
         return components.url!.absoluteString
     }
     
-    func convertToJSONObject(data: Data) -> [String: AnyObject]{
+    func convertToJSONObject(_ data: Data) -> [String: AnyObject]{
         
         var parsedResult: Any!
         

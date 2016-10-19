@@ -35,9 +35,9 @@ class TMEditBlogViewController: UIViewController, UITextFieldDelegate {
         ] as [String : Any]
         
         //POST Request
-        oauth1swift?.client.request(TMClient.sharedInstance().tumblrURL(withPathExtension: Methods.PostText), method: .POST, parameters: parameters, headers: nil, success: {
+        oauth1swift?.client.request(TMClient.sharedInstance().tumblrURL(Methods.PostText), method: .POST, parameters: parameters, headers: nil, success: {
             (data, error) in
-            let json = TMClient.sharedInstance().convertToJSONObject(data: data)
+            let json = TMClient.sharedInstance().convertToJSONObject(data)
             
             guard let meta = json["meta"] as? [String:AnyObject] else {
                 print("Did not fina 'meta' key in the parse json \(json)")
@@ -50,7 +50,7 @@ class TMEditBlogViewController: UIViewController, UITextFieldDelegate {
             }
             
             if msg == "Created" {
-                self.displayAlert(text: "Text Posted")
+                self.displayAlert("Text Posted")
             }
             
             }, failure: {
@@ -62,7 +62,7 @@ class TMEditBlogViewController: UIViewController, UITextFieldDelegate {
       
     //MARK: Alert
 
-    func displayAlert(text: String) {
+    func displayAlert(_ text: String) {
         
         let alert = UIAlertController(title: "Result", message: text, preferredStyle: .alert)
         

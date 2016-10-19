@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C3C88151DB70DC4001A38F2 /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3C88141DB70DC4001A38F2 /* OAuthSwift.framework */; };
+		6C3C88161DB70DF1001A38F2 /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3C88141DB70DC4001A38F2 /* OAuthSwift.framework */; };
+		6C3C88171DB70DF1001A38F2 /* OAuthSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3C88141DB70DC4001A38F2 /* OAuthSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6C55B0731DB503FE00AA8B2B /* TMSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C55B0721DB503FE00AA8B2B /* TMSearchViewController.swift */; };
 		6C98CF0D1DB578A1009A03C1 /* TMEditBlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C98CF0C1DB578A1009A03C1 /* TMEditBlogViewController.swift */; };
 		6C98CF0F1DB578DC009A03C1 /* TMFollowingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C98CF0E1DB578DC009A03C1 /* TMFollowingViewController.swift */; };
@@ -17,69 +20,7 @@
 		6CE79F961DB2BF6A0059C19B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CE79F941DB2BF6A0059C19B /* LaunchScreen.storyboard */; };
 		6CE79FBC1DB2C3120059C19B /* TMClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE79FBB1DB2C3120059C19B /* TMClient.swift */; };
 		6CE79FC61DB2C9EB0059C19B /* TMConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE79FC51DB2C9EB0059C19B /* TMConstants.swift */; };
-		6CF51E201DB6F026002E63EC /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE79FA81DB2BFA80059C19B /* OAuthSwift.framework */; };
-		6CF51E211DB6F026002E63EC /* OAuthSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6CE79FA81DB2BFA80059C19B /* OAuthSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		94BF53FBFFA4904A637F9665 /* Pods_tumblr_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DE3CECC49322800B754B1DC /* Pods_tumblr_app.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		6CE79FA71DB2BFA80059C19B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6CE79F9D1DB2BFA80059C19B /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F435027A1A6791B200038A29;
-			remoteInfo = OAuthSwift;
-		};
-		6CE79FA91DB2BFA80059C19B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6CE79F9D1DB2BFA80059C19B /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = F451E3C5195B8CD80051434C;
-			remoteInfo = OAuthSwiftDemo;
-		};
-		6CE79FAB1DB2BFA80059C19B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6CE79F9D1DB2BFA80059C19B /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C48B28021AFA598D00C7DEF6;
-			remoteInfo = OAuthSwiftOSX;
-		};
-		6CE79FAD1DB2BFA80059C19B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6CE79F9D1DB2BFA80059C19B /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C49FD5241AFB5DF500791E1A;
-			remoteInfo = OAuthSwiftOSXDemo;
-		};
-		6CE79FAF1DB2BFA80059C19B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6CE79F9D1DB2BFA80059C19B /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C4B6EE1E1BF74CE300443596;
-			remoteInfo = OAuthSwiftTVOS;
-		};
-		6CE79FB11DB2BFA80059C19B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6CE79F9D1DB2BFA80059C19B /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C40890C01C11B37000E3146A;
-			remoteInfo = OAuthSwiftWatchOS;
-		};
-		6CE79FB31DB2BFA80059C19B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6CE79F9D1DB2BFA80059C19B /* OAuthSwift.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C4D50DF71BFB693F0053B624;
-			remoteInfo = OAuthSwiftTests;
-		};
-		6CF51E221DB6F026002E63EC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 6CE79F9D1DB2BFA80059C19B /* OAuthSwift.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F43502791A6791B200038A29;
-			remoteInfo = OAuthSwift;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		6CF51E241DB6F027002E63EC /* Embed Frameworks */ = {
@@ -88,7 +29,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6CF51E211DB6F026002E63EC /* OAuthSwift.framework in Embed Frameworks */,
+				6C3C88171DB70DF1001A38F2 /* OAuthSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,9 +37,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		08A95F8A701F70D43A70FCB8 /* Pods-tumblr-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tumblr-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-tumblr-app/Pods-tumblr-app.release.xcconfig"; sourceTree = "<group>"; };
-		0DE3CECC49322800B754B1DC /* Pods_tumblr_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tumblr_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		13FE64AECFCE9A85AE03333C /* Pods-tumblr-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tumblr-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tumblr-app/Pods-tumblr-app.debug.xcconfig"; sourceTree = "<group>"; };
+		6C3C88141DB70DC4001A38F2 /* OAuthSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OAuthSwift.framework; sourceTree = "<group>"; };
 		6C55B0721DB503FE00AA8B2B /* TMSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TMSearchViewController.swift; path = ../TMSearchViewController.swift; sourceTree = "<group>"; };
 		6C98CF0C1DB578A1009A03C1 /* TMEditBlogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMEditBlogViewController.swift; sourceTree = "<group>"; };
 		6C98CF0E1DB578DC009A03C1 /* TMFollowingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMFollowingViewController.swift; sourceTree = "<group>"; };
@@ -109,7 +48,6 @@
 		6CE79F921DB2BF6A0059C19B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6CE79F951DB2BF6A0059C19B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6CE79F971DB2BF6A0059C19B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6CE79F9D1DB2BFA80059C19B /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = "../../frameworks/OAuthSwift-master/OAuthSwift.xcodeproj"; sourceTree = "<group>"; };
 		6CE79FBB1DB2C3120059C19B /* TMClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMClient.swift; sourceTree = "<group>"; };
 		6CE79FC51DB2C9EB0059C19B /* TMConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,8 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CF51E201DB6F026002E63EC /* OAuthSwift.framework in Frameworks */,
-				94BF53FBFFA4904A637F9665 /* Pods_tumblr_app.framework in Frameworks */,
+				6C3C88151DB70DC4001A38F2 /* OAuthSwift.framework in Frameworks */,
+				6C3C88161DB70DF1001A38F2 /* OAuthSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,7 +68,6 @@
 		0DF4914732B7CE2214B7D6D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0DE3CECC49322800B754B1DC /* Pods_tumblr_app.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -174,7 +111,7 @@
 		6CE79F8A1DB2BF690059C19B /* tumblr-app */ = {
 			isa = PBXGroup;
 			children = (
-				6CE79F9D1DB2BFA80059C19B /* OAuthSwift.xcodeproj */,
+				6C3C88141DB70DC4001A38F2 /* OAuthSwift.framework */,
 				6CE79F8B1DB2BF690059C19B /* AppDelegate.swift */,
 				6CE79FB91DB2C2F60059C19B /* Model */,
 				6C98CF081DB56C45009A03C1 /* Controller */,
@@ -185,20 +122,6 @@
 				6CE79F971DB2BF6A0059C19B /* Info.plist */,
 			);
 			path = "tumblr-app";
-			sourceTree = "<group>";
-		};
-		6CE79F9E1DB2BFA80059C19B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6CE79FA81DB2BFA80059C19B /* OAuthSwift.framework */,
-				6CE79FAA1DB2BFA80059C19B /* OAuthSwiftDemo.app */,
-				6CE79FAC1DB2BFA80059C19B /* OAuthSwift.framework */,
-				6CE79FAE1DB2BFA80059C19B /* OAuthSwiftOSXDemo.app */,
-				6CE79FB01DB2BFA80059C19B /* OAuthSwift.framework */,
-				6CE79FB21DB2BFA80059C19B /* OAuthSwift.framework */,
-				6CE79FB41DB2BFA80059C19B /* OAuthSwiftTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		6CE79FB91DB2C2F60059C19B /* Model */ = {
@@ -221,8 +144,6 @@
 		7E24AE2107AEB7A464F69DBB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				13FE64AECFCE9A85AE03333C /* Pods-tumblr-app.debug.xcconfig */,
-				08A95F8A701F70D43A70FCB8 /* Pods-tumblr-app.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -234,18 +155,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6CE79F9A1DB2BF6A0059C19B /* Build configuration list for PBXNativeTarget "tumblr-app" */;
 			buildPhases = (
-				DB1ABA4AB97C2C23B435F877 /* [CP] Check Pods Manifest.lock */,
 				6CE79F841DB2BF690059C19B /* Sources */,
 				6CE79F851DB2BF690059C19B /* Frameworks */,
 				6CE79F861DB2BF690059C19B /* Resources */,
 				6CF51E241DB6F027002E63EC /* Embed Frameworks */,
-				094FC66C42F5CF49371C37F4 /* [CP] Embed Pods Frameworks */,
-				3DF6D811C52166AD7464F0F2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6CF51E231DB6F026002E63EC /* PBXTargetDependency */,
 			);
 			name = "tumblr-app";
 			productName = "tumblr-app";
@@ -265,6 +182,7 @@
 					6CE79F871DB2BF690059C19B = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = DV58E5Z476;
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -280,70 +198,12 @@
 			mainGroup = 6CE79F7F1DB2BF690059C19B;
 			productRefGroup = 6CE79F891DB2BF690059C19B /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 6CE79F9E1DB2BFA80059C19B /* Products */;
-					ProjectRef = 6CE79F9D1DB2BFA80059C19B /* OAuthSwift.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				6CE79F871DB2BF690059C19B /* tumblr-app */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		6CE79FA81DB2BFA80059C19B /* OAuthSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OAuthSwift.framework;
-			remoteRef = 6CE79FA71DB2BFA80059C19B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6CE79FAA1DB2BFA80059C19B /* OAuthSwiftDemo.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = OAuthSwiftDemo.app;
-			remoteRef = 6CE79FA91DB2BFA80059C19B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6CE79FAC1DB2BFA80059C19B /* OAuthSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OAuthSwift.framework;
-			remoteRef = 6CE79FAB1DB2BFA80059C19B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6CE79FAE1DB2BFA80059C19B /* OAuthSwiftOSXDemo.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = OAuthSwiftOSXDemo.app;
-			remoteRef = 6CE79FAD1DB2BFA80059C19B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6CE79FB01DB2BFA80059C19B /* OAuthSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OAuthSwift.framework;
-			remoteRef = 6CE79FAF1DB2BFA80059C19B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6CE79FB21DB2BFA80059C19B /* OAuthSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = OAuthSwift.framework;
-			remoteRef = 6CE79FB11DB2BFA80059C19B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		6CE79FB41DB2BFA80059C19B /* OAuthSwiftTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = OAuthSwiftTests.xctest;
-			remoteRef = 6CE79FB31DB2BFA80059C19B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6CE79F861DB2BF690059C19B /* Resources */ = {
@@ -357,54 +217,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		094FC66C42F5CF49371C37F4 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tumblr-app/Pods-tumblr-app-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3DF6D811C52166AD7464F0F2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tumblr-app/Pods-tumblr-app-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DB1ABA4AB97C2C23B435F877 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6CE79F841DB2BF690059C19B /* Sources */ = {
@@ -422,14 +234,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		6CF51E231DB6F026002E63EC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = OAuthSwift;
-			targetProxy = 6CF51E221DB6F026002E63EC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6CE79F8F1DB2BF690059C19B /* Main.storyboard */ = {
@@ -546,12 +350,14 @@
 		};
 		6CE79F9B1DB2BF6A0059C19B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 13FE64AECFCE9A85AE03333C /* Pods-tumblr-app.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DV58E5Z476;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)/tumblr-app",
+				);
 				INFOPLIST_FILE = "tumblr-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(PROJECT_DIR)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.idelfonso.tumblr-app";
@@ -562,12 +368,14 @@
 		};
 		6CE79F9C1DB2BF6A0059C19B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 08A95F8A701F70D43A70FCB8 /* Pods-tumblr-app.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DV58E5Z476;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/**",
+					"$(PROJECT_DIR)/tumblr-app",
+				);
 				INFOPLIST_FILE = "tumblr-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(PROJECT_DIR)";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.idelfonso.tumblr-app";

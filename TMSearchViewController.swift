@@ -41,10 +41,10 @@ class TMSearchViewController: UIViewController, UITextFieldDelegate {
             ] as [String : Any]
         
         //GET Request
-        oauth1swift?.client.request(TMClient.sharedInstance().tumblrURL(withPathExtension: Methods.Tagged), method: .GET, parameters: parameters, headers: nil, success: {
+        oauth1swift?.client.request(TMClient.sharedInstance().tumblrURL(Methods.Tagged), method: .GET, parameters: parameters, headers: nil, success: {
             (data, error) in
             
-            let json = TMClient.sharedInstance().convertToJSONObject(data: data)
+            let json = TMClient.sharedInstance().convertToJSONObject(data)
             
             print(json)
             

@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
     }
     
     //MARK: Alerts
-    func presentAlert(title: String, message: String) {
+    func presentAlert(_ title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         
@@ -37,7 +37,7 @@ class LoginViewController: UIViewController {
     
     //MARK: Helpers
     
-    private func loginWithOauth() {
+    fileprivate func loginWithOauth() {
         //Set OAuth
         let oauth1swift = OAuth1Swift(
             consumerKey: Constants.ConsumerKey,
@@ -56,10 +56,10 @@ class LoginViewController: UIViewController {
             print(credential.oauthTokenSecret)
             
             oauth1swift.client.request(
-                TMClient.sharedInstance().tumblrURL(withPathExtension: Methods.UserInfo),
+                TMClient.sharedInstance().tumblrURL(Methods.UserInfo),
                 method: .GET,
                 success: { data, response in
-                    let json = TMClient.sharedInstance().convertToJSONObject(data: data)
+                    let json = TMClient.sharedInstance().convertToJSONObject(data)
                     print(json)
                     
                 }, failure: {
@@ -70,7 +70,7 @@ class LoginViewController: UIViewController {
             //present navigation view controller modally
             self.openNavigationView()
             }, failure: { (error) in
-                self.presentAlert(title: "Error", message: "User has cancel approval")
+                self.presentAlert("Error", message: "User has cancel approval")
                 print(error)
         })
     }
