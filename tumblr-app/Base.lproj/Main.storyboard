@@ -129,7 +129,7 @@
         <!--Detail Blog View Controller-->
         <scene sceneID="kBo-GZ-gvv">
             <objects>
-                <viewController id="pFv-ve-HFp" customClass="TMDetailBlogViewController" customModule="tumblr_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TMDetailBlogViewController" id="pFv-ve-HFp" customClass="TMDetailBlogViewController" customModule="tumblr_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KuU-DC-ecN"/>
                         <viewControllerLayoutGuide type="bottom" id="xVU-oN-aKH"/>
@@ -143,6 +143,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.55002913004873277" green="1" blue="0.58275409555483104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Follow"/>
+                                <connections>
+                                    <action selector="followUser:" destination="pFv-ve-HFp" eventType="touchUpInside" id="38Y-sH-5Wl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pC0-5D-oFh">
                                 <frame key="frameInset" minY="264" width="180" height="126"/>
@@ -164,6 +167,7 @@
                         <outlet property="blogNameLabel" destination="2lq-Bf-YaJ" id="Kej-ja-Oqk"/>
                         <outlet property="followButton" destination="DL4-HP-Kb6" id="FzS-3A-LUH"/>
                         <outlet property="unfollowButton" destination="pC0-5D-oFh" id="dZI-12-tN7"/>
+                        <outlet property="unfollowUser" destination="pC0-5D-oFh" id="17B-rW-OxC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qxY-mV-qTJ" userLabel="First Responder" sceneMemberID="firstResponder"/>

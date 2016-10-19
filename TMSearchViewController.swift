@@ -111,6 +111,16 @@ class TMSearchViewController: UIViewController, UITextFieldDelegate, UITableView
         return cell!
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let blog = self.blogs?[indexPath.row]
+        
+        let controller = storyboard!.instantiateViewController(withIdentifier: "TMDetailBlogViewController") as! TMDetailBlogViewController
+        
+        controller.blog = blog
+        
+        self.present(controller, animated: true, completion: nil)
+    
+    }
     
     
 }

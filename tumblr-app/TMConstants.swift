@@ -34,7 +34,10 @@ struct Methods {
     static let Tagged           = "/tagged"
     static let UserInfo         = "/user/info"
     static let UserDashboard    = "/user/dashboard"
-
+    static let FollowUser       = "/user/follow"
+    static let UnfollowUser     = "/user/unfollow"
+    static let UsersFollowing   = "/user/following"
+    
     //POST
     static let PostText = "/blog/idelfonsog2.tumblr.com/post"
 }
@@ -43,14 +46,12 @@ struct ParameterKeys {
     //Include when required
     static let ApiKey   = "api_key"
 
-//MARK: Search/Tagged ParamKeys
-    
-    //Search method
+    //Search/Tagged ParamKeys
     static let Tag      = "tag"     // *req
     static let Limit    = "limit"
     static let Filter   = "filter" // text, html
     
-//MARK: Blog ParamKeys
+    //MARK: Blog ParamKeys
     
     //Post blog
     static let BlogType     = "type"    // *req
@@ -69,8 +70,10 @@ struct ParameterKeys {
     static let Source   = "sourse"  // *req
     static let Data     = "data"    // *req
     static let Data64   = "data64"  // *req
-
-
+    
+    //User Follows/Unfollow
+    static let URL      = "url"     // *req
+    
 }
 
 struct ParameterValues {

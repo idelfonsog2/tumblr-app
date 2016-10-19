@@ -13,7 +13,7 @@ class TMEditBlogViewController: UIViewController, UITextFieldDelegate {
 
     //MAR: Properties
     var oauth1swift: OAuth1Swift? = nil
-    
+    var session = TMClient.sharedInstance()
     //MARK: IBOutlets
     @IBOutlet weak var textBlog: UITextView!
     
@@ -35,9 +35,9 @@ class TMEditBlogViewController: UIViewController, UITextFieldDelegate {
         ] as [String : Any]
         
         //POST Request
-        let _ = oauth1swift?.client.request(TMClient.sharedInstance().tumblrURL(Methods.PostText), method: .POST, parameters: parameters, headers: nil, success: {
+        let _ = oauth1swift?.client.request(session.tumblrURL(Methods.PostText), method: .POST, parameters: parameters, headers: nil, success: {
             (data, error) in
-            let json = TMClient.sharedInstance().convertToJSONObject(data)
+            let json = session.convertToJSONObject(data)
             
             guard let meta = json["meta"] as? [String:AnyObject] else {
                 print("Did not fina 'meta' key in the parse json \(json)")
