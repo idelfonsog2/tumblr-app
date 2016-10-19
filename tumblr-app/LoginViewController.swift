@@ -51,7 +51,7 @@ class LoginViewController: UIViewController {
         //Make Authorization request
         oauth1swift.authorizeURLHandler = SafariURLHandler(viewController: self, oauthSwift: oauth1swift)
         
-        oauth1swift.authorize(withCallbackURL: "tumblr-app://oauth-callback", success: { (credential, response, parameter) in
+        let _ = oauth1swift.authorize(withCallbackURL: "tumblr-app://oauth-callback", success: { (credential, response, parameter) in
             print(credential.oauthToken)
             print(credential.oauthTokenSecret)
             

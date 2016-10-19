@@ -35,7 +35,7 @@ class TMEditBlogViewController: UIViewController, UITextFieldDelegate {
         ] as [String : Any]
         
         //POST Request
-        oauth1swift?.client.request(TMClient.sharedInstance().tumblrURL(Methods.PostText), method: .POST, parameters: parameters, headers: nil, success: {
+        let _ = oauth1swift?.client.request(TMClient.sharedInstance().tumblrURL(Methods.PostText), method: .POST, parameters: parameters, headers: nil, success: {
             (data, error) in
             let json = TMClient.sharedInstance().convertToJSONObject(data)
             

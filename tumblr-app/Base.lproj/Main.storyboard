@@ -66,14 +66,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search in Tumblr" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MRh-BM-Iyw">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Search in Tumblr" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MRh-BM-Iyw">
                                 <color key="backgroundColor" red="0.226162374" green="0.27677661180000002" blue="0.35995441680000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="nyP-BC-1ma"/>
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="joh-ep-qRB">
                                 <frame key="frameInset" minY="107" width="375" height="511"/>
@@ -96,6 +96,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" id="3og-rP-h06"/>
                     <connections>
+                        <outlet property="resultsTable" destination="joh-ep-qRB" id="yil-uN-nPa"/>
                         <outlet property="searchText" destination="MRh-BM-Iyw" id="uaR-MB-ybf"/>
                     </connections>
                 </viewController>

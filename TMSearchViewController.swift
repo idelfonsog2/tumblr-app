@@ -16,6 +16,7 @@ class TMSearchViewController: UIViewController, UITextFieldDelegate {
     
     //MARK: IBOutlets
     @IBOutlet weak var searchText: UITextField!
+    @IBOutlet weak var resultsTable: UITableView!
     
     //MAR: Life Cycle
     override func viewDidLoad() {
@@ -25,6 +26,10 @@ class TMSearchViewController: UIViewController, UITextFieldDelegate {
     }
     
     //MAR: UITextFieldDelegate
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        //clear text box when user taps search
+        self.searchText.text = ""
+    }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
@@ -41,7 +46,7 @@ class TMSearchViewController: UIViewController, UITextFieldDelegate {
             ] as [String : Any]
         
         //GET Request
-        oauth1swift?.client.request(TMClient.sharedInstance().tumblrURL(Methods.Tagged), method: .GET, parameters: parameters, headers: nil, success: {
+        let _ = oauth1swift?.client.request(TMClient.sharedInstance().tumblrURL(Methods.Tagged), method: .GET, parameters: parameters, headers: nil, success: {
             (data, error) in
             
             let json = TMClient.sharedInstance().convertToJSONObject(data)
