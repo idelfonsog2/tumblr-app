@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import OAuthSwift
 
 //MAR: TMBlog
 struct TMBlog {

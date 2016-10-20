@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6C3C88151DB70DC4001A38F2 /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3C88141DB70DC4001A38F2 /* OAuthSwift.framework */; };
-		6C3C88161DB70DF1001A38F2 /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3C88141DB70DC4001A38F2 /* OAuthSwift.framework */; };
-		6C3C88171DB70DF1001A38F2 /* OAuthSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3C88141DB70DC4001A38F2 /* OAuthSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6C3291091DB8605F007F7CEA /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3291081DB8605F007F7CEA /* OAuthSwift.framework */; };
+		6C32910A1DB86065007F7CEA /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3291081DB8605F007F7CEA /* OAuthSwift.framework */; };
+		6C32910B1DB86065007F7CEA /* OAuthSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6C3291081DB8605F007F7CEA /* OAuthSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		6C55B0731DB503FE00AA8B2B /* TMSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C55B0721DB503FE00AA8B2B /* TMSearchViewController.swift */; };
 		6C98CF0D1DB578A1009A03C1 /* TMEditBlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C98CF0C1DB578A1009A03C1 /* TMEditBlogViewController.swift */; };
 		6C98CF0F1DB578DC009A03C1 /* TMFollowingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C98CF0E1DB578DC009A03C1 /* TMFollowingViewController.swift */; };
@@ -24,14 +24,82 @@
 		6CFC504F1DB8089D00AD33F1 /* TMDetailBlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFC504E1DB8089D00AD33F1 /* TMDetailBlogViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6C52A2641DB862A300E7537A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C52A25A1DB862A300E7537A /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F435027A1A6791B200038A29;
+			remoteInfo = OAuthSwift;
+		};
+		6C52A2661DB862A300E7537A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C52A25A1DB862A300E7537A /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F451E3C5195B8CD80051434C;
+			remoteInfo = OAuthSwiftDemo;
+		};
+		6C52A2681DB862A300E7537A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C52A25A1DB862A300E7537A /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C48B28021AFA598D00C7DEF6;
+			remoteInfo = OAuthSwiftOSX;
+		};
+		6C52A26A1DB862A300E7537A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C52A25A1DB862A300E7537A /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C49FD5241AFB5DF500791E1A;
+			remoteInfo = OAuthSwiftOSXDemo;
+		};
+		6C52A26C1DB862A300E7537A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C52A25A1DB862A300E7537A /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C4B6EE1E1BF74CE300443596;
+			remoteInfo = OAuthSwiftTVOS;
+		};
+		6C52A26E1DB862A300E7537A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C52A25A1DB862A300E7537A /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C40890C01C11B37000E3146A;
+			remoteInfo = OAuthSwiftWatchOS;
+		};
+		6C52A2701DB862A300E7537A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C52A25A1DB862A300E7537A /* OAuthSwift.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C4D50DF71BFB693F0053B624;
+			remoteInfo = OAuthSwiftTests;
+		};
+		6C52A2721DB862D400E7537A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6C52A25A1DB862A300E7537A /* OAuthSwift.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F43502791A6791B200038A29;
+			remoteInfo = OAuthSwift;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
+		6C3227A21DB8562300B208BB /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6CF51E241DB6F027002E63EC /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				6C3C88171DB70DF1001A38F2 /* OAuthSwift.framework in Embed Frameworks */,
+				6C32910B1DB86065007F7CEA /* OAuthSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -39,7 +107,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6C3C88141DB70DC4001A38F2 /* OAuthSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OAuthSwift.framework; sourceTree = "<group>"; };
+		6C3291081DB8605F007F7CEA /* OAuthSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = OAuthSwift.framework; sourceTree = "<group>"; };
+		6C52A25A1DB862A300E7537A /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = "../../frameworks/OAuthSwift-master/OAuthSwift.xcodeproj"; sourceTree = "<group>"; };
 		6C55B0721DB503FE00AA8B2B /* TMSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TMSearchViewController.swift; path = ../TMSearchViewController.swift; sourceTree = "<group>"; };
 		6C98CF0C1DB578A1009A03C1 /* TMEditBlogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMEditBlogViewController.swift; sourceTree = "<group>"; };
 		6C98CF0E1DB578DC009A03C1 /* TMFollowingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMFollowingViewController.swift; sourceTree = "<group>"; };
@@ -61,8 +130,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C3C88151DB70DC4001A38F2 /* OAuthSwift.framework in Frameworks */,
-				6C3C88161DB70DF1001A38F2 /* OAuthSwift.framework in Frameworks */,
+				6C32910A1DB86065007F7CEA /* OAuthSwift.framework in Frameworks */,
+				6C3291091DB8605F007F7CEA /* OAuthSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +143,20 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6C52A25B1DB862A300E7537A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6C52A2651DB862A300E7537A /* OAuthSwift.framework */,
+				6C52A2671DB862A300E7537A /* OAuthSwiftDemo.app */,
+				6C52A2691DB862A300E7537A /* OAuthSwift.framework */,
+				6C52A26B1DB862A300E7537A /* OAuthSwiftOSXDemo.app */,
+				6C52A26D1DB862A300E7537A /* OAuthSwift.framework */,
+				6C52A26F1DB862A300E7537A /* OAuthSwift.framework */,
+				6C52A2711DB862A300E7537A /* OAuthSwiftTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		6C98CF081DB56C45009A03C1 /* Controller */ = {
@@ -116,8 +199,9 @@
 		6CE79F8A1DB2BF690059C19B /* tumblr-app */ = {
 			isa = PBXGroup;
 			children = (
-				6C3C88141DB70DC4001A38F2 /* OAuthSwift.framework */,
+				6C52A25A1DB862A300E7537A /* OAuthSwift.xcodeproj */,
 				6CE79F8B1DB2BF690059C19B /* AppDelegate.swift */,
+				6C3291081DB8605F007F7CEA /* OAuthSwift.framework */,
 				6CE79FB91DB2C2F60059C19B /* Model */,
 				6C98CF081DB56C45009A03C1 /* Controller */,
 				6C98CF0B1DB5761D009A03C1 /* Delegates */,
@@ -165,10 +249,12 @@
 				6CE79F851DB2BF690059C19B /* Frameworks */,
 				6CE79F861DB2BF690059C19B /* Resources */,
 				6CF51E241DB6F027002E63EC /* Embed Frameworks */,
+				6C3227A21DB8562300B208BB /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6C52A2731DB862D400E7537A /* PBXTargetDependency */,
 			);
 			name = "tumblr-app";
 			productName = "tumblr-app";
@@ -204,12 +290,70 @@
 			mainGroup = 6CE79F7F1DB2BF690059C19B;
 			productRefGroup = 6CE79F891DB2BF690059C19B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 6C52A25B1DB862A300E7537A /* Products */;
+					ProjectRef = 6C52A25A1DB862A300E7537A /* OAuthSwift.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				6CE79F871DB2BF690059C19B /* tumblr-app */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		6C52A2651DB862A300E7537A /* OAuthSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuthSwift.framework;
+			remoteRef = 6C52A2641DB862A300E7537A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6C52A2671DB862A300E7537A /* OAuthSwiftDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OAuthSwiftDemo.app;
+			remoteRef = 6C52A2661DB862A300E7537A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6C52A2691DB862A300E7537A /* OAuthSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuthSwift.framework;
+			remoteRef = 6C52A2681DB862A300E7537A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6C52A26B1DB862A300E7537A /* OAuthSwiftOSXDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OAuthSwiftOSXDemo.app;
+			remoteRef = 6C52A26A1DB862A300E7537A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6C52A26D1DB862A300E7537A /* OAuthSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuthSwift.framework;
+			remoteRef = 6C52A26C1DB862A300E7537A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6C52A26F1DB862A300E7537A /* OAuthSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuthSwift.framework;
+			remoteRef = 6C52A26E1DB862A300E7537A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6C52A2711DB862A300E7537A /* OAuthSwiftTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OAuthSwiftTests.xctest;
+			remoteRef = 6C52A2701DB862A300E7537A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		6CE79F861DB2BF690059C19B /* Resources */ = {
@@ -242,6 +386,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6C52A2731DB862D400E7537A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OAuthSwift;
+			targetProxy = 6C52A2721DB862D400E7537A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6CE79F8F1DB2BF690059C19B /* Main.storyboard */ = {
@@ -362,15 +514,19 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DV58E5Z476;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/**",
 					"$(PROJECT_DIR)/tumblr-app",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "tumblr-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(PROJECT_DIR)";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.idelfonso.tumblr-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
 			};
 			name = Debug;
 		};
@@ -380,15 +536,19 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DV58E5Z476;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/**",
 					"$(PROJECT_DIR)/tumblr-app",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = "tumblr-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks $(PROJECT_DIR)";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.idelfonso.tumblr-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				VALID_ARCHS = "arm64 armv7 armv7s i386";
 			};
 			name = Release;
 		};

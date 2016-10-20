@@ -38,6 +38,7 @@ class TMDetailBlogViewController: UIViewController {
 
     @IBAction func followUser(_ sender: AnyObject) {
         
+        //Decompose blog url string 
         let usersBlogURL = self.getBlogUrl(url: (blog?.url)!)
         
         //Query Params for /user/foloww
@@ -46,12 +47,8 @@ class TMDetailBlogViewController: UIViewController {
             ParameterKeys.ApiKey: ParameterValues.ApiKey
             ]
         
-        print("\(session.tumblrURL(Methods.FollowUser))\(parameters)")
-        
         let _ = oauth1swift?.client.request(session.tumblrURL(Methods.FollowUser), method: .POST, parameters: parameters, headers: nil, success: {
                 (data, error) in
-            
-            let json = self.session.convertToJSONObject(data)
             
             DispatchQueue.main.async {
                 self.displayAlert("Following user")
