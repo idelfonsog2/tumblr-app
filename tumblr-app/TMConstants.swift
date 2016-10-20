@@ -83,7 +83,7 @@ struct ParameterValues {
 
     //MARK: Search/Tagged ParamValues
     
-    static let Limit        = 5
+    static let Limit        = 20
     static let TextFilter   = "text"
     static let RawFilter    = "raw"
 
