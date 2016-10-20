@@ -39,7 +39,7 @@ class TMDetailBlogViewController: UIViewController {
     @IBAction func followUser(_ sender: AnyObject) {
         
         //Decompose blog url string 
-        let usersBlogURL = self.getBlogUrl(url: (blog?.url)!)
+        let usersBlogURL = self.getBlogURL(url: (blog?.url)!)
         
         //Query Params for /user/foloww
         let parameters = [
@@ -47,6 +47,7 @@ class TMDetailBlogViewController: UIViewController {
             ParameterKeys.ApiKey: ParameterValues.ApiKey
             ]
         
+        //POST request to /user/follow
         let _ = oauth1swift?.client.request(session.tumblrURL(Methods.FollowUser), method: .POST, parameters: parameters, headers: nil, success: {
                 (data, error) in
             
@@ -63,6 +64,27 @@ class TMDetailBlogViewController: UIViewController {
     
     @IBAction func unfollowUser(_ sender: AnyObject) {
         
+        //decompose blog url string
+        let usersBlogURL = self.getBlogURL(url: (blog?.url)!)
+        
+        //Query params for /user/unfollow
+        let parameters = [
+            ParameterKeys.ApiKey: ParameterValues.ApiKey,
+            ParameterKeys.URL: usersBlogURL
+        ]
+        
+        //POST request to /user/unfollow
+        let _ = oauth1swift?.client.request(session.tumblrURL(Methods.UnfollowUser), method: .POST, parameters: parameters, headers: nil, success: {
+            (data, error) in
+            
+            DispatchQueue.main.async {
+                self.displayAlert("Not following user anymore")
+                self.dismiss(animated: true, completion: nil)
+            }
+            }, failure: {
+                (error) in
+                print(error)
+        })
     }
     
     
@@ -82,7 +104,7 @@ class TMDetailBlogViewController: UIViewController {
     
     
     //Decompose the URL from search results
-    func getBlogUrl(url: String) -> String {
+    func getBlogURL(url: String) -> String {
         
         let scheme      = URL(string: url)?.scheme
         let host        = URL(string: url)?.host
