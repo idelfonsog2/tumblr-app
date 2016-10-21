@@ -166,6 +166,39 @@
             </objects>
             <point key="canvasLocation" x="1189.5999999999999" y="2129.6851574212897"/>
         </scene>
+        <!--Unfollow View Controller-->
+        <scene sceneID="HBc-B3-GZh">
+            <objects>
+                <viewController storyboardIdentifier="TMUnfollowViewController" id="3AJ-4t-hSy" customClass="TMUnfollowViewController" customModule="tumblr_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0N3-3Y-sp8"/>
+                        <viewControllerLayoutGuide type="bottom" id="7yt-JQ-RJQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eaL-UT-jMl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sHv-GK-qb2">
+                                <frame key="frameInset" minY="287" width="375" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.39014104121145221" blue="0.38962905373676782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Unfollow"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blog Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIG-RR-tiV">
+                                <frame key="frameInset" minX="145" minY="108" width="84" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EMq-tK-uwc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2024.8" y="2129.6851574212897"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="ebc-gF-Dcp">
             <objects>
@@ -200,6 +233,16 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iPW-DM-1W1">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FollowingViewCell" id="11h-hn-bya">
+                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="11h-hn-bya" id="rVd-tn-3mL">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="PQw-50-Hpw" id="4im-L3-PpT"/>
                                     <outlet property="delegate" destination="PQw-50-Hpw" id="gZ1-eA-dFc"/>
@@ -215,6 +258,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Following" id="7b8-lR-FUP"/>
+                    <connections>
+                        <outlet property="blogTableView" destination="iPW-DM-1W1" id="JmO-Wn-koy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HJW-Tg-dQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
