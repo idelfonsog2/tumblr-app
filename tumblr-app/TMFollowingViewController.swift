@@ -24,13 +24,13 @@ class TMFollowingViewController: UIViewController, UITableViewDataSource, UITabl
 
         //init OAuth
         self.oauth1swift = TMClient.sharedInstance().oauth1swift as! OAuth1Swift?
-
+        self.blogs = [[String:AnyObject]]()
         self.showBlogs()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.blogTableView.reloadData()
+        self.showBlogs()
     }
     
     //MARK: Func
@@ -76,7 +76,7 @@ class TMFollowingViewController: UIViewController, UITableViewDataSource, UITabl
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //FIX:
-        return 4
+        return blogs!.count
     }
 
 
