@@ -53,7 +53,6 @@ class TMDetailBlogViewController: UIViewController {
             
             DispatchQueue.main.async {
                 self.displayAlert("Following user")
-                self.dismiss(animated: true, completion: nil)
             }
             
             }, failure: { error in
