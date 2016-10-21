@@ -19,20 +19,19 @@ class TMDetailBlogViewController: UIViewController {
 
     //MARK: IBOutlets
     @IBOutlet weak var blogNameLabel: UILabel!
-    @IBOutlet weak var unfollowButton: UIButton!
     @IBOutlet weak var followButton: UIButton!
     
     //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         oauth1swift = TMClient.sharedInstance().oauth1swift as! OAuth1Swift?
-        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
     
     //MARK: IBActions
 
@@ -60,31 +59,6 @@ class TMDetailBlogViewController: UIViewController {
                 print(error)
         })
         
-    }
-    
-    @IBAction func unfollowUser(_ sender: AnyObject) {
-        
-        //decompose blog url string
-        let usersBlogURL = self.getBlogURL(url: (blog?.url)!)
-        
-        //Query params for /user/unfollow
-        let parameters = [
-            ParameterKeys.ApiKey: ParameterValues.ApiKey,
-            ParameterKeys.URL: usersBlogURL
-        ]
-        
-        //POST request to /user/unfollow
-        let _ = oauth1swift?.client.request(session.tumblrURL(Methods.UnfollowUser), method: .POST, parameters: parameters, headers: nil, success: {
-            (data, error) in
-            
-            DispatchQueue.main.async {
-                self.displayAlert("Not following user anymore")
-                self.dismiss(animated: true, completion: nil)
-            }
-            }, failure: {
-                (error) in
-                print(error)
-        })
     }
     
     

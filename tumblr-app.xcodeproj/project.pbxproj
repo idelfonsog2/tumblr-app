@@ -92,8 +92,8 @@
 			children = (
 				6CE79F8D1DB2BF690059C19B /* LoginViewController.swift */,
 				6C98CF0C1DB578A1009A03C1 /* TMEditBlogViewController.swift */,
-				6CFC504E1DB8089D00AD33F1 /* TMDetailBlogViewController.swift */,
 				6C55B0721DB503FE00AA8B2B /* TMSearchViewController.swift */,
+				6CFC504E1DB8089D00AD33F1 /* TMDetailBlogViewController.swift */,
 				6C98CF0E1DB578DC009A03C1 /* TMFollowingViewController.swift */,
 			);
 			name = Controller;

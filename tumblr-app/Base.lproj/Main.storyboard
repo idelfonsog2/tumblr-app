@@ -139,21 +139,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DL4-HP-Kb6">
-                                <frame key="frameInset" minX="188" minY="264" width="187" height="126"/>
+                                <frame key="frameInset" minY="264" width="375" height="126"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.55002913004873277" green="1" blue="0.58275409555483104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Follow"/>
                                 <connections>
                                     <action selector="followUser:" destination="pFv-ve-HFp" eventType="touchUpInside" id="38Y-sH-5Wl"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pC0-5D-oFh">
-                                <frame key="frameInset" minY="264" width="180" height="126"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.33052839509150589" blue="0.34076858115293618" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Unfollow"/>
-                                <connections>
-                                    <action selector="unfollowUser:" destination="pFv-ve-HFp" eventType="touchUpInside" id="yWz-dq-sEg"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blog Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2lq-Bf-YaJ">
@@ -169,7 +160,6 @@
                     <connections>
                         <outlet property="blogNameLabel" destination="2lq-Bf-YaJ" id="Kej-ja-Oqk"/>
                         <outlet property="followButton" destination="DL4-HP-Kb6" id="FzS-3A-LUH"/>
-                        <outlet property="unfollowButton" destination="pC0-5D-oFh" id="dZI-12-tN7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qxY-mV-qTJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -199,7 +189,7 @@
         <!--Following-->
         <scene sceneID="dcA-Zx-boU">
             <objects>
-                <viewController id="PQw-50-Hpw" customClass="TMFollowingViewController" customModule="tumblr_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TMFollowingViewController" id="PQw-50-Hpw" customClass="TMFollowingViewController" customModule="tumblr_app" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pbc-se-vfs"/>
                         <viewControllerLayoutGuide type="bottom" id="Vrl-A9-n0r"/>
@@ -210,6 +200,10 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iPW-DM-1W1">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="PQw-50-Hpw" id="4im-L3-PpT"/>
+                                    <outlet property="delegate" destination="PQw-50-Hpw" id="gZ1-eA-dFc"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

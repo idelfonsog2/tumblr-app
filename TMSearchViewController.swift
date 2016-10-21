@@ -38,6 +38,8 @@ class TMSearchViewController: UIViewController, UITextFieldDelegate, UITableView
         self.searchText.text = ""
     }
     
+    
+    //Continuous searching
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         //constantly keep searching with the addition of new chars
@@ -58,14 +60,10 @@ class TMSearchViewController: UIViewController, UITextFieldDelegate, UITableView
             (data, error) in
             
             let json = TMClient.sharedInstance().convertToJSONObject(data)
-            print(json)
+            
             if let results = json["response"] as? [[String:AnyObject]] {
                 
                 self.blogs = TMBlog.blogsFromResults(results: results)
-                for blog in self.blogs! {
-                    print(blog.name)
-                }
-
             }
             
             //Update Table in main Thread
@@ -75,7 +73,7 @@ class TMSearchViewController: UIViewController, UITextFieldDelegate, UITableView
             
             }, failure: {
                 error in
-                
+                print("Error in GET Call request to \(Methods.Tagged)")
                 print(error)
         })
 
@@ -86,6 +84,7 @@ class TMSearchViewController: UIViewController, UITextFieldDelegate, UITableView
     
     //MARK: UITextFieldDelegates
     
+    //dismiss keyboard when 'Done' is tap
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return true
@@ -93,7 +92,6 @@ class TMSearchViewController: UIViewController, UITextFieldDelegate, UITableView
     
     
     //MARK: UITableViewDelegate
-        //Return 5 results per search
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (self.blogs?.count)!
     }
@@ -104,13 +102,14 @@ class TMSearchViewController: UIViewController, UITextFieldDelegate, UITableView
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchViewCell", for: indexPath) as UITableViewCell!
     
-        let blog = self.blogs?[indexPath.row]
-        
-        cell?.textLabel?.text = "\(blog!.name)"
-        
+        if let blog = self.blogs?[indexPath.row] {
+            cell?.textLabel?.text = "\(blog.name)"
+        }
+
         return cell!
     }
     
+    //Show Details for search results
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let blog = self.blogs?[indexPath.row]
         
@@ -119,7 +118,6 @@ class TMSearchViewController: UIViewController, UITextFieldDelegate, UITableView
         controller.blog = blog
         
         self.present(controller, animated: true, completion: nil)
-    
     }
     
     

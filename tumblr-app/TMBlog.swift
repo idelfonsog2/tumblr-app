@@ -14,16 +14,14 @@ import OAuthSwift
 struct TMBlog {
 
   //MARK: Properties
-  let name: String
-  let url: String
-  let id: Int
+  let name: String?
+  let url: String?
 
   //MAR: Initializers
 
   //construct a blog object froma dictionary
   init(dictionary: [String: AnyObject]) {
     self.name = dictionary[ResponseKeys.BlogName] as! String
-    self.id   = dictionary[ResponseKeys.BlogID] as! Int
     self.url  = dictionary[ResponseKeys.BlogURL] as! String
   }
 
