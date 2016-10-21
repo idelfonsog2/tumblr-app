@@ -91,13 +91,13 @@ class TMFollowingViewController: UIViewController, UITableViewDataSource, UITabl
 
     //Show Details for search results
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//      let blog = self.blogs?[indexPath.row]
-//
-//      let controller = storyboard?.instantiateViewController(withIdentifier: "TMUnfollowViewController") as! TMUnfollowViewController
-//
-//      //controller.blog = blog
-//
-//      self.present(controller, animated: true, completion: nil)
+      let blog = self.blogs?[indexPath.row]
+
+      let controller = storyboard?.instantiateViewController(withIdentifier: "TMUnfollowViewController") as! TMUnfollowViewController
+
+      controller.blog = blog
+
+      self.present(controller, animated: true, completion: nil)
 
     }
 }
