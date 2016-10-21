@@ -103,7 +103,7 @@ class TMSearchViewController: UIViewController, UITextFieldDelegate, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchViewCell", for: indexPath) as UITableViewCell!
     
         if let blog = self.blogs?[indexPath.row] {
-            cell?.textLabel?.text = "\(blog.name)"
+            cell?.textLabel?.text = "\(blog.name!)"
         }
 
         return cell!

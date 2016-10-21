@@ -28,6 +28,11 @@ class TMFollowingViewController: UIViewController, UITableViewDataSource, UITabl
         self.showBlogs()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.blogTableView.reloadData()
+    }
+    
     //MARK: Func
 
     func showBlogs() {

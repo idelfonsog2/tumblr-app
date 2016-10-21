@@ -49,13 +49,15 @@ class TMUnfollowViewController: UIViewController {
         let _ = oauth1swift?.client.request(session.tumblrURL(Methods.UnfollowUser), method: .POST, parameters: parameters, headers: nil, success: {
              (data, error) in
             
-            let json = self.session.convertToJSONObject(data)
-            print(json)
-            
+            DispatchQueue.main.async {
+                self.displayAlert("Unfollow")
+            }
+
             }, failure: {
                 (error) in
                 print("Error making the POST reques to /user/unfollow")
                 print(error)
+                self.displayAlert("Fail to unfollow")
         })
         
     }
