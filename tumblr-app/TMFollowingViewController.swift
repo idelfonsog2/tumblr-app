@@ -12,9 +12,8 @@ import OAuthSwift
 class TMFollowingViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //Properties
-    var blogs: [TMBlog]?
     var oauth1swift: OAuth1Swift? = nil
-    
+    var blogs: [[String:AnyObject]]?
     //MARK: IBOutlets
     
     @IBOutlet weak var blogTableView: UITableView!
@@ -24,7 +23,6 @@ class TMFollowingViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         
         //init
-        self.blogs = [TMBlog]()
         self.oauth1swift = TMClient.sharedInstance().oauth1swift as! OAuth1Swift?
         
         //Query params for /users/following
@@ -38,14 +36,17 @@ class TMFollowingViewController: UIViewController, UITableViewDelegate, UITableV
             
             let json = TMClient.sharedInstance().convertToJSONObject(data)
             
-            if let results = json["response"] as? [[String:AnyObject]] {
-                
-                print(results)
-                
-            } else {
-                print("no response key found")
+            guard let results = json["response"] as? [String:AnyObject] else {
+                print("No response key found")
+                return
             }
             
+            guard let blogsDictionaryArray = results["blogs"] as? [[String:AnyObject]] else {
+                print("No 'blogs' key found")
+                return
+            }
+            
+            self.blogs = blogsDictionaryArray
             
             }, failure: {
                 (error) in
@@ -62,7 +63,7 @@ class TMFollowingViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (blogs?.count)!
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -70,7 +71,13 @@ class TMFollowingViewController: UIViewController, UITableViewDelegate, UITableV
         
         let blog = self.blogs?[indexPath.row]
         
-        cell.textLabel?.text = "\(blog?.name)"
+
+        if let name = blog?["name"] as! String? {
+            cell.textLabel?.text = name
+            print(name)
+        }
+    
+        
         
         return cell
     }
@@ -81,7 +88,8 @@ class TMFollowingViewController: UIViewController, UITableViewDelegate, UITableV
         
         let controller = storyboard?.instantiateViewController(withIdentifier: "TMDetailBlogViewController") as! TMDetailBlogViewController
         
-        controller.blog = blog
+        //controller.blog = blog
+        
         self.present(controller, animated: true, completion: nil)
     }
 
