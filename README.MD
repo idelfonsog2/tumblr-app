@@ -19,4 +19,4 @@ A Tumblr Client, with different capabilities
 
 ## example
 
-![](http://imgur.com/PKWI7Gd)
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/VVhQZVFBPIc/0.jpg)](http://www.youtube.com/watch?v=VVhQZVFBPIc)
