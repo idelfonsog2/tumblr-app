@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="tumblr_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3y-eg-mWC">
+                                <frame key="frameInset" minX="16" minY="216" width="343" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.226162374" green="0.27677661180000002" blue="0.35995441680000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <size key="titleShadowOffset" width="8" height="9"/>
+                                <state key="normal" title="Login with Tumblr">
+                                    <color key="titleColor" red="0.99599152803421021" green="0.99613410234451294" blue="0.9959602952003479" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginWithTumblr:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UEJ-lg-kq9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Power by:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKF-1k-I6M">
+                                <frame key="frameInset" minX="16" minY="481" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.99600285291671753" green="0.99619680643081665" blue="0.99162989854812622" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tumblr_name" translatesAutoresizingMaskIntoConstraints="NO" id="fVF-5k-zkA">
+                                <frame key="frameInset" minX="119" minY="510" width="137" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2261623740196228" green="0.27677661180496216" blue="0.35995441675186157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="debugLabel" destination="PKF-1k-I6M" id="Yqt-UE-9Qg"/>
+                        <outlet property="loginButton" destination="f3y-eg-mWC" id="Wk5-Qi-4GL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="120.8" y="119.1904047976012"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="1jf-Ka-aSr">
+            <objects>
+                <viewController id="RMz-KL-2mM" customClass="TMSearchViewController" customModule="tumblr_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gVr-qM-2Dn"/>
+                        <viewControllerLayoutGuide type="bottom" id="dWu-do-kaH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="K6k-wb-I7p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Search in Tumblr" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MRh-BM-Iyw">
+                                <color key="backgroundColor" red="0.226162374" green="0.27677661180000002" blue="0.35995441680000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="nyP-BC-1ma"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xRH-KQ-CIF">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchViewCell" textLabel="zDt-AO-aYJ" style="IBUITableViewCellStyleDefault" id="UEv-Uk-9Ab">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UEv-Uk-9Ab" id="tI3-aG-yPV">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zDt-AO-aYJ">
+                                                    <frame key="frameInset" minX="15" width="345" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="RMz-KL-2mM" id="RJ6-pq-IlU"/>
+                                    <outlet property="delegate" destination="RMz-KL-2mM" id="Frh-BO-xpS"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xRH-KQ-CIF" firstAttribute="leading" secondItem="K6k-wb-I7p" secondAttribute="leading" id="6Ke-QM-nJB"/>
+                            <constraint firstItem="xRH-KQ-CIF" firstAttribute="top" secondItem="MRh-BM-Iyw" secondAttribute="bottom" id="COs-gD-Tid"/>
+                            <constraint firstItem="dWu-do-kaH" firstAttribute="top" secondItem="xRH-KQ-CIF" secondAttribute="bottom" id="FxR-uV-xcy"/>
+                            <constraint firstAttribute="trailing" secondItem="MRh-BM-Iyw" secondAttribute="trailing" id="GlA-Hc-XNc"/>
+                            <constraint firstItem="MRh-BM-Iyw" firstAttribute="top" secondItem="gVr-qM-2Dn" secondAttribute="bottom" id="Ogs-oy-L4i"/>
+                            <constraint firstAttribute="trailing" secondItem="MRh-BM-Iyw" secondAttribute="trailing" id="WWx-FP-st7"/>
+                            <constraint firstItem="MRh-BM-Iyw" firstAttribute="top" secondItem="gVr-qM-2Dn" secondAttribute="bottom" id="X0g-Qp-Edv"/>
+                            <constraint firstAttribute="trailing" secondItem="xRH-KQ-CIF" secondAttribute="trailing" id="hZ4-Iu-QNI"/>
+                            <constraint firstItem="MRh-BM-Iyw" firstAttribute="leading" secondItem="K6k-wb-I7p" secondAttribute="leading" id="vUr-LF-685"/>
+                            <constraint firstItem="MRh-BM-Iyw" firstAttribute="leading" secondItem="K6k-wb-I7p" secondAttribute="leading" id="xcB-3N-bWz"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Search" id="3og-rP-h06"/>
+                    <connections>
+                        <outlet property="resultsTable" destination="xRH-KQ-CIF" id="ioI-re-oJb"/>
+                        <outlet property="searchText" destination="MRh-BM-Iyw" id="uaR-MB-ybf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L1a-30-dRq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1208.8" y="1389.3553223388308"/>
+        </scene>
+        <!--Detail Blog View Controller-->
+        <scene sceneID="kBo-GZ-gvv">
+            <objects>
+                <viewController storyboardIdentifier="TMDetailBlogViewController" id="pFv-ve-HFp" customClass="TMDetailBlogViewController" customModule="tumblr_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KuU-DC-ecN"/>
+                        <viewControllerLayoutGuide type="bottom" id="xVU-oN-aKH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8xg-Bd-kUG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DL4-HP-Kb6">
+                                <frame key="frameInset" minX="188" minY="264" width="187" height="126"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.55002913004873277" green="1" blue="0.58275409555483104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Follow"/>
+                                <connections>
+                                    <action selector="followUser:" destination="pFv-ve-HFp" eventType="touchUpInside" id="38Y-sH-5Wl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pC0-5D-oFh">
+                                <frame key="frameInset" minY="264" width="180" height="126"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.33052839509150589" blue="0.34076858115293618" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Unfollow"/>
+                                <connections>
+                                    <action selector="unfollowUser:" destination="pFv-ve-HFp" eventType="touchUpInside" id="yWz-dq-sEg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blog Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2lq-Bf-YaJ">
+                                <frame key="frameInset" minY="70" width="375" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="blogNameLabel" destination="2lq-Bf-YaJ" id="Kej-ja-Oqk"/>
+                        <outlet property="followButton" destination="DL4-HP-Kb6" id="FzS-3A-LUH"/>
+                        <outlet property="unfollowButton" destination="pC0-5D-oFh" id="dZI-12-tN7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qxY-mV-qTJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1189.5999999999999" y="2129.6851574212897"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ebc-gF-Dcp">
+            <objects>
+                <tabBarController id="XpE-oV-nd5" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="cEu-WN-TvT"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="J2r-T7-bOD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="RMz-KL-2mM" kind="relationship" relationship="viewControllers" id="7bW-09-6Tt"/>
+                        <segue destination="PQw-50-Hpw" kind="relationship" relationship="viewControllers" id="7Ho-ri-g2Q"/>
+                        <segue destination="uFO-fR-KTD" kind="relationship" relationship="viewControllers" id="AJJ-9J-opK"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NV4-qf-KaL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1588" y="477"/>
+        </scene>
+        <!--Following-->
+        <scene sceneID="dcA-Zx-boU">
+            <objects>
+                <viewController id="PQw-50-Hpw" customClass="TMFollowingViewController" customModule="tumblr_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Pbc-se-vfs"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vrl-A9-n0r"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UZb-9l-4Bl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iPW-DM-1W1">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vrl-A9-n0r" firstAttribute="top" secondItem="iPW-DM-1W1" secondAttribute="bottom" id="U73-er-sv0"/>
+                            <constraint firstItem="iPW-DM-1W1" firstAttribute="top" secondItem="Pbc-se-vfs" secondAttribute="bottom" constant="8" id="fGM-Q1-mLl"/>
+                            <constraint firstItem="iPW-DM-1W1" firstAttribute="leading" secondItem="UZb-9l-4Bl" secondAttribute="leading" id="qk2-Sb-xlm"/>
+                            <constraint firstAttribute="trailing" secondItem="iPW-DM-1W1" secondAttribute="trailing" id="s6z-Pg-DjX"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Following" id="7b8-lR-FUP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HJW-Tg-dQr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2024.8" y="1389.3553223388308"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mx0-BC-M1t">
+            <objects>
+                <navigationController storyboardIdentifier="ManagerNavigationController" id="Rgf-YQ-oe7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TgP-VE-pLr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="XpE-oV-nd5" kind="relationship" relationship="rootViewController" id="hdi-GN-vfa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r2q-jm-AOO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="804" y="119"/>
+        </scene>
+        <!--Edit Blog View Controller-->
+        <scene sceneID="JsM-D5-dQ8">
+            <objects>
+                <viewController id="uFO-fR-KTD" customClass="TMEditBlogViewController" customModule="tumblr_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dGm-oK-Pm0"/>
+                        <viewControllerLayoutGuide type="bottom" id="XOt-1V-3Si"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WM2-Ww-eRn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Starting writting here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5AD-iK-b6N">
+                                <color key="backgroundColor" red="0.2261623740196228" green="0.27677661180496216" blue="0.35995441675186157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ngp-gN-8Mb">
+                                <color key="backgroundColor" red="1" green="0.59570608083027743" blue="0.14005287860212234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="Post">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="postTextBlog:" destination="uFO-fR-KTD" eventType="touchUpInside" id="ljh-pu-dMN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.226162374" green="0.27677661180000002" blue="0.35995441680000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ngp-gN-8Mb" firstAttribute="top" secondItem="5AD-iK-b6N" secondAttribute="bottom" constant="1" id="6sL-Im-bLr"/>
+                            <constraint firstItem="5AD-iK-b6N" firstAttribute="leading" secondItem="WM2-Ww-eRn" secondAttribute="leading" id="7Pp-Hl-ptM"/>
+                            <constraint firstItem="XOt-1V-3Si" firstAttribute="top" secondItem="Ngp-gN-8Mb" secondAttribute="bottom" id="REt-S2-eew"/>
+                            <constraint firstAttribute="trailing" secondItem="Ngp-gN-8Mb" secondAttribute="trailing" id="SJv-E6-25H"/>
+                            <constraint firstItem="Ngp-gN-8Mb" firstAttribute="leading" secondItem="WM2-Ww-eRn" secondAttribute="leading" id="THY-4v-oTG"/>
+                            <constraint firstItem="5AD-iK-b6N" firstAttribute="top" secondItem="dGm-oK-Pm0" secondAttribute="bottom" constant="8" id="lQy-GB-aNt"/>
+                            <constraint firstAttribute="trailing" secondItem="5AD-iK-b6N" secondAttribute="trailing" id="zmT-Zi-ef8"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" id="LtY-IK-FAM"/>
+                    <connections>
+                        <outlet property="textBlog" destination="5AD-iK-b6N" id="KT4-Vc-xYy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zOx-Xo-RXG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="389.60000000000002" y="1390.2548725637182"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tumblr_name" width="199" height="64"/>
+    </resources>
+</document>
