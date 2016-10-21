@@ -58,7 +58,7 @@ class TMSearchViewController: UIViewController, UITextFieldDelegate, UITableView
             (data, error) in
             
             let json = TMClient.sharedInstance().convertToJSONObject(data)
-            print(json)
+            
             if let results = json["response"] as? [[String:AnyObject]] {
                 
                 self.blogs = TMBlog.blogsFromResults(results: results)

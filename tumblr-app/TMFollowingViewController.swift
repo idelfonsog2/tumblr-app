@@ -14,6 +14,7 @@ class TMFollowingViewController: UIViewController, UITableViewDelegate, UITableV
     //Properties
     var oauth1swift: OAuth1Swift? = nil
     var blogs: [[String:AnyObject]]?
+    
     //MARK: IBOutlets
     
     @IBOutlet weak var blogTableView: UITableView!
@@ -48,6 +49,10 @@ class TMFollowingViewController: UIViewController, UITableViewDelegate, UITableV
             
             self.blogs = blogsDictionaryArray
             
+            DispatchQueue.main.async {
+                self.blogTableView.reloadData()
+            }
+            
             }, failure: {
                 (error) in
                 print(error)
@@ -70,7 +75,6 @@ class TMFollowingViewController: UIViewController, UITableViewDelegate, UITableV
         let cell = tableView.dequeueReusableCell(withIdentifier: "FollowingViewCell", for: indexPath)
         
         let blog = self.blogs?[indexPath.row]
-        
 
         if let name = blog?["name"] as! String? {
             cell.textLabel?.text = name
