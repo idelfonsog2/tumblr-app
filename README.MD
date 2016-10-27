@@ -11,7 +11,6 @@ A Tumblr Client, with different capabilities
 
 1. `git clone https://github.com/idelfonsog2/tumblr-app.git && cd tumblr-app`
 2. `open tumblr-app.xcodeproj`
-4. Place your client consumer key and client secret into the `tumblr-app/TMConstants.swift`
 5. Run the project either in the simulator or the device
 
 ## usage
