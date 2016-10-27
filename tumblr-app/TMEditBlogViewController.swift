@@ -56,6 +56,7 @@ class TMEditBlogViewController: UIViewController, UITextFieldDelegate {
             
             }, failure: {
                 error in
+                print("Error postind the blog")
                 print(error)
         })
 

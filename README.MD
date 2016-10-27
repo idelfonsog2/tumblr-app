@@ -10,7 +10,7 @@ A Tumblr Client, with different capabilities
 ## setup
 
 1. `git clone https://github.com/idelfonsog2/tumblr-app.git && cd tumblr-app`
-2. `open tumblr-app.xcodeproj`
+2. `open tumblr-app.xcworkspace`
 5. Run the project either in the simulator or the device
 
 ## usage
